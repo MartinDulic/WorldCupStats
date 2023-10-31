@@ -56,11 +56,12 @@ namespace DAL.Repositories
         {
 
             CreateSettingsIfNeeded();
-            
-            IList<string> settings = new List<string>();
-            settings.Add(SETTING_TYPE_1 + appSettings.RepositoryType.ToString());
-            File.WriteAllLines(SETTINGS_FILE_PATH, settings);
 
+            IList<string> settings = new List<string>
+            {
+                SETTING_TYPE_1 + appSettings.RepositoryType.ToString()
+            };
+            File.WriteAllLines(SETTINGS_FILE_PATH, settings);
 
         }
     }
