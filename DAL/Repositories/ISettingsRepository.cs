@@ -12,7 +12,7 @@ namespace DAL.Repositories
 
         public AppSettings GetSettings();
         public void UpdateSettings(AppSettings appSettings);
-        public void CreateSettingsIfNeeded();
+        public bool CreateSettingsIfNeeded();
 
     }
 }

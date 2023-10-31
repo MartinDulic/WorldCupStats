@@ -1,1 +1,3 @@
 ﻿repository:file
+lang:hrv
+championship:men
