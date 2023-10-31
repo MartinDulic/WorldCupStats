@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartingForm));
             gbLanguage = new GroupBox();
             rbEng = new RadioButton();
             rbHrv = new RadioButton();
@@ -41,91 +42,67 @@
             // 
             // gbLanguage
             // 
+            resources.ApplyResources(gbLanguage, "gbLanguage");
             gbLanguage.Controls.Add(rbEng);
             gbLanguage.Controls.Add(rbHrv);
-            gbLanguage.Location = new Point(280, 188);
             gbLanguage.Name = "gbLanguage";
-            gbLanguage.Size = new Size(200, 100);
-            gbLanguage.TabIndex = 0;
             gbLanguage.TabStop = false;
-            gbLanguage.Text = "Choose Language";
             // 
             // rbEng
             // 
-            rbEng.AutoSize = true;
+            resources.ApplyResources(rbEng, "rbEng");
             rbEng.Checked = true;
-            rbEng.Location = new Point(45, 57);
             rbEng.Name = "rbEng";
-            rbEng.Size = new Size(63, 19);
-            rbEng.TabIndex = 1;
             rbEng.TabStop = true;
-            rbEng.Text = "English";
             rbEng.UseVisualStyleBackColor = true;
+            rbEng.CheckedChanged += rbEng_CheckedChanged;
             // 
             // rbHrv
             // 
-            rbHrv.AutoSize = true;
-            rbHrv.Location = new Point(45, 32);
+            resources.ApplyResources(rbHrv, "rbHrv");
             rbHrv.Name = "rbHrv";
-            rbHrv.Size = new Size(68, 19);
-            rbHrv.TabIndex = 0;
             rbHrv.TabStop = true;
-            rbHrv.Text = "Hrvatski";
             rbHrv.UseVisualStyleBackColor = true;
+            rbHrv.CheckedChanged += rbHrv_CheckedChanged;
             // 
             // rbMans
             // 
-            rbMans.AutoSize = true;
+            resources.ApplyResources(rbMans, "rbMans");
             rbMans.Checked = true;
-            rbMans.Location = new Point(45, 32);
             rbMans.Name = "rbMans";
-            rbMans.Size = new Size(54, 19);
-            rbMans.TabIndex = 0;
             rbMans.TabStop = true;
-            rbMans.Text = "Mans";
             rbMans.UseVisualStyleBackColor = true;
             // 
             // gbChampionship
             // 
+            resources.ApplyResources(gbChampionship, "gbChampionship");
             gbChampionship.Controls.Add(rbWomans);
             gbChampionship.Controls.Add(rbMans);
-            gbChampionship.Location = new Point(280, 72);
             gbChampionship.Name = "gbChampionship";
-            gbChampionship.Size = new Size(200, 100);
-            gbChampionship.TabIndex = 2;
             gbChampionship.TabStop = false;
-            gbChampionship.Text = "Choose Championship";
             // 
             // rbWomans
             // 
-            rbWomans.AutoSize = true;
-            rbWomans.Location = new Point(45, 57);
+            resources.ApplyResources(rbWomans, "rbWomans");
             rbWomans.Name = "rbWomans";
-            rbWomans.Size = new Size(72, 19);
-            rbWomans.TabIndex = 1;
             rbWomans.TabStop = true;
-            rbWomans.Text = "Womans";
             rbWomans.UseVisualStyleBackColor = true;
             // 
             // btnStart
             // 
-            btnStart.Location = new Point(280, 313);
+            resources.ApplyResources(btnStart, "btnStart");
             btnStart.Name = "btnStart";
-            btnStart.Size = new Size(200, 29);
-            btnStart.TabIndex = 3;
-            btnStart.Text = "Start";
             btnStart.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // StartingForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
             Controls.Add(btnStart);
             Controls.Add(gbChampionship);
             Controls.Add(gbLanguage);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "StartingForm";
+            Load += StartingForm_Load;
             gbLanguage.ResumeLayout(false);
             gbLanguage.PerformLayout();
             gbChampionship.ResumeLayout(false);

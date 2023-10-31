@@ -10,6 +10,7 @@ using DAL;
 using DAL.Repositories;
 using System.Configuration;
 using System.ComponentModel;
+using DAL.Model.Enums;
 
 internal class Program
 {
@@ -19,12 +20,13 @@ internal class Program
 		try
 		{
 
-			IDataRepository repository = RepositoryFactory.GetDataRepository();
-            foreach(var item in repository.GetAllManMatchData())
-			{
-				Console.WriteLine(item.ToString());
-			}
-
+			ISettingsRepository settingsRepository = RepositoryFactory.GetSettingsRepository();
+			var settings = settingsRepository.GetSettings();
+			settings = Utils.SetSettingsLanguageByTag(settings, "hr-HR");
+			settingsRepository.UpdateSettings(settings);
+            Console.WriteLine(settings.Language.ToString());
+            settings = settingsRepository.GetSettings();
+            Console.WriteLine(settings.Language.ToString());
         }
         catch (Exception e)
 		{

@@ -16,8 +16,8 @@ namespace DAL.Repositories
         private const string SETTING_REPOSITORY_1 = "file";
         private const string SETTING_REPOSITORY_2 = "api";
         private const string SETTING_TYPE_2 = "lang";
-        private const string SETTING_REPOSITORY_3 = "hrv";
-        private const string SETTING_REPOSITORY_4 = "eng";
+        private const string SETTING_REPOSITORY_3 = "croatian";
+        private const string SETTING_REPOSITORY_4 = "english";
         private const string SETTING_TYPE_3 = "championship";
         private const string SETTING_REPOSITORY_5 = "men";
         private const string SETTING_REPOSITORY_6 = "woman";
@@ -28,11 +28,11 @@ namespace DAL.Repositories
             {
                 IList<string> settings = new List<string>
                 {
-                    SETTING_TYPE_1 + SETTING_REPOSITORY_1,
-                    SETTING_TYPE_2 + SETTING_REPOSITORY_3,
-                    SETTING_TYPE_3 + SETTING_REPOSITORY_5,
+                    SETTING_TYPE_1 + DELIMITER + SETTING_REPOSITORY_1,
+                    SETTING_TYPE_2 + DELIMITER + SETTING_REPOSITORY_3,
+                    SETTING_TYPE_3 + DELIMITER + SETTING_REPOSITORY_5,
                 };
-                File.Create(SETTINGS_FILE_PATH);
+                
                 File.WriteAllLines(SETTINGS_FILE_PATH, settings);
                 return true;
             }
@@ -42,12 +42,14 @@ namespace DAL.Repositories
 
         public AppSettings GetSettings()
         {
+            CreateSettingsIfNeeded();
             string[] data = File.ReadAllLines(SETTINGS_FILE_PATH);
-            AppSettings settings = new AppSettings();
-
-            settings.RepositoryType = ParseRepositoryType(data[0]);
-            settings.Language = ParseLanguage(data[1]);
-            settings.SelectedChampionship = ParseSelectedChampionship(data[2]);
+            AppSettings settings = new AppSettings
+            {
+                RepositoryType = ParseRepositoryType(data[0]),
+                Language = ParseLanguage(data[1]),
+                SelectedChampionship = ParseSelectedChampionship(data[2])
+            };
 
             return settings;
         }
@@ -99,7 +101,10 @@ namespace DAL.Repositories
 
             IList<string> settings = new List<string>
             {
-                SETTING_TYPE_1 + appSettings.RepositoryType.ToString()
+                SETTING_TYPE_1 + DELIMITER + appSettings.RepositoryType.ToString().ToLower(),
+                SETTING_TYPE_2 + DELIMITER + appSettings.Language.ToString().ToLower(),
+                SETTING_TYPE_3 + DELIMITER + appSettings.SelectedChampionship.ToString().ToLower()
+
             };
             File.WriteAllLines(SETTINGS_FILE_PATH, settings);
 

@@ -6,8 +6,10 @@ using System.Collections.Generic;
 using System.IO.Pipes;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace DAL
 {
@@ -42,6 +44,23 @@ namespace DAL
 
             string json = File.ReadAllText(filePath);
             return JsonConvert.DeserializeObject<T>(json, SettingsJson.jsonSerializerSettings);
+        }
+
+        public static AppSettings SetSettingsLanguageByTag(AppSettings settings, string tag)
+        {
+
+            if (tag == "hr-HR")
+            {
+                settings.Language = Model.Enums.Language.CROATIAN;
+            } else if (tag == "en-US")
+            {
+                settings.Language = Model.Enums.Language.ENGLISH;
+            } else
+            {
+                throw new Exception("Utils: Invalid tag");
+            }
+
+            return settings;
         }
 
     }
