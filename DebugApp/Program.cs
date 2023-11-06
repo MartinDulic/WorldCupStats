@@ -22,7 +22,7 @@ internal class Program
 
 			ISettingsRepository settingsRepository = RepositoryFactory.GetSettingsRepository();
 			var settings = settingsRepository.GetSettings();
-			settings = Utils.SetSettingsLanguageByTag(settings, "hr-HR");
+			settings = Utils.SetSettingsLanguageByTag(settings, "en-US");
 			settingsRepository.UpdateSettings(settings);
             Console.WriteLine(settings.Language.ToString());
             settings = settingsRepository.GetSettings();
