@@ -72,15 +72,36 @@ namespace MenForms
         private void btnNext_Click(object sender, EventArgs e)
         {
             settingsRepo.UpdateSettings(settings);
-            settings=settingsRepo.GetSettings();
-
-            if (settings.SelectedChampionship==SelectedChampionship.MEN) {
-            
-            } else
+            settings = settingsRepo.GetSettings();
+            try
             {
 
-            }
+                if (settings.SelectedChampionship == SelectedChampionship.MEN)
+                {
 
+                    var form = new FavouriteTeamForm();
+                    form.Show();
+
+
+
+                }
+                else
+                {
+
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            Close();
+            Dispose();
+        }
+
+        private void StartingForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Dispose();
         }
     }
 }

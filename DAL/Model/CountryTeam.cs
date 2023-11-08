@@ -52,8 +52,21 @@ namespace DAL.Model
         [JsonProperty("goal_differential", NullValueHandling = NullValueHandling.Ignore)]
         public int? GoalDifferential { get; set; }
 
+        public override bool Equals(object? obj)
+        {
+            return obj is CountryTeam team &&
+                   Id == team.Id;
+        }
 
-        public override string ToString() => $"Id: {Id}, Name: {CountryName}";
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id);
+        }
+
+        public override string ToString() => $"{CountryName} ({FifaCode})";
+
+
+
     }
 
 }

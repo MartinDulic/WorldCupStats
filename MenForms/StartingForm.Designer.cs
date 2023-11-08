@@ -103,6 +103,7 @@
             Controls.Add(gbLanguage);
             Controls.Add(btnNext);
             Name = "StartingForm";
+            FormClosing += StartingForm_FormClosing;
             gbLanguage.ResumeLayout(false);
             gbLanguage.PerformLayout();
             gbChampionship.ResumeLayout(false);
