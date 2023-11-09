@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repositories
 {
-    internal class SettingsFileRepository : ISettingsRepository
+    internal class AppSettingsFileRepository : ISettingsRepository
     {
         private const char DELIMITER = ':';
         private const string SETTINGS_FILE_PATH = @"..\..\..\..\DAL\Resources\settings.txt";

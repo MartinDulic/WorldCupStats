@@ -97,11 +97,14 @@ namespace MenForms
             }
             Close();
             Dispose();
+            Utils.KillProccess(Utils.PROCCES_NAME);
+
         }
 
         private void StartingForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Dispose();
+            Utils.KillProccess(Utils.PROCCES_NAME);
         }
     }
 }

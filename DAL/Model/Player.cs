@@ -20,6 +20,11 @@ namespace DAL.Model
 
         [JsonProperty("position", NullValueHandling = NullValueHandling.Ignore)]
         public string? Position { get; set; }
+
+        public override string? ToString()
+        {
+            return $"{Name}";
+        }
     }
 
 }

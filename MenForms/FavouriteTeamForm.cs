@@ -10,20 +10,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Resources;
-
+using System.Diagnostics;
+using DAL;
+using DAL.Model.Enums;
 
 namespace MenForms
 {
     public partial class FavouriteTeamForm : Form
     {
-        readonly ISettingsRepository settingsRepo = RepositoryFactory.GetSettingsRepository();
-        readonly IDataRepository dataRepository = RepositoryFactory.GetDataRepository();
-        AppSettings settings = new AppSettings();
-        ResourceManager rm = new ResourceManager("MenForms.FavouriteTeamsForm", typeof(FavouriteTeamForm).Assembly);
+        private readonly ISettingsRepository appSettingsRepo = RepositoryFactory.GetSettingsRepository();
+        private readonly IFavouriteSettingsRepository favouriteSettingsRepo = RepositoryFactory.GetFavouriteSettingsRepository();
+        private readonly IDataRepository dataRepository = RepositoryFactory.GetDataRepository();
+        private ResourceManager rm = new ResourceManager("MenForms.FavouriteTeamForm", typeof(FavouriteTeamForm).Assembly);
 
         public FavouriteTeamForm()
         {
             InitializeComponent();
+            if (appSettingsRepo.GetSettings().Language == Language.CROATIAN)
+            {
+
+                lblChooseTeam.Text = rm.GetString("lblChooseTeam.Text");
+                brnNext.Text = rm.GetString("brnNext.Text");
+            }
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -39,6 +48,24 @@ namespace MenForms
         private void FavouriteTeamForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Dispose();
+            Utils.KillProccess(Utils.PROCCES_NAME);
+        }
+
+        private void brnNext_Click(object sender, EventArgs e)
+        {
+            var selectedTeam =
+                dataRepository.GetAllMenCountryTeamData().ToList().ElementAt(cbTeams.SelectedIndex);
+            var favouriteSettings = favouriteSettingsRepo.GetSettings();
+            favouriteSettings.FavouriteTeam = selectedTeam;
+            favouriteSettingsRepo.UpdateSettings(favouriteSettings);
+
+            var form = new FavouritePlayersForm();
+            form.Show();
+
+            Close();
+            Dispose();
+            Utils.KillProccess(Utils.PROCCES_NAME);
+
         }
     }
 }

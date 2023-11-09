@@ -3,6 +3,7 @@ using DAL.Settings;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO.Pipes;
 using System.Linq;
 using System.Net;
@@ -15,6 +16,8 @@ namespace DAL
 {
     public static class Utils
     {
+        public static string PROCCES_NAME = "MenForms.exe";
+
         public static T? GetJsonObjectFromUrl<T>(string url)
         {
             Console.WriteLine("Utils: " + url);
@@ -61,6 +64,18 @@ namespace DAL
             }
 
             return settings;
+        }
+
+        public static void KillProccess(string processName)
+        {
+
+
+            Process[] processes = Process.GetProcessesByName(processName);
+
+            foreach (Process process in processes)
+            {
+                process.Kill();
+            }
         }
 
     }

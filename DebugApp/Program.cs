@@ -19,14 +19,11 @@ internal class Program
 
 		try
 		{
+			IFavouriteSettingsRepository favouriteSettingsRepository = 
+				RepositoryFactory.GetFavouriteSettingsRepository();
+			var settings = favouriteSettingsRepository.GetSettings();
+            Console.WriteLine(settings);
 
-			ISettingsRepository settingsRepository = RepositoryFactory.GetSettingsRepository();
-			var settings = settingsRepository.GetSettings();
-			settings = Utils.SetSettingsLanguageByTag(settings, "en-US");
-			settingsRepository.UpdateSettings(settings);
-            Console.WriteLine(settings.Language.ToString());
-            settings = settingsRepository.GetSettings();
-            Console.WriteLine(settings.Language.ToString());
         }
         catch (Exception e)
 		{

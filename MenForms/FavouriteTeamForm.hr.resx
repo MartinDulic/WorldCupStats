@@ -118,49 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 226</value>
+  <data name="cbTeams.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 27</value>
   </data>
-  <data name="btnNext.Text" xml:space="preserve">
+  <data name="cbTeams.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 23</value>
+  </data>
+  <data name="lblChooseTeam.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="lblChooseTeam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 15</value>
+  </data>
+  <data name="lblChooseTeam.Text" xml:space="preserve">
+    <value>Odaberi Omiljenu Reprezentaciju</value>
+  </data>
+  <data name="brnNext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 65</value>
+  </data>
+  <data name="brnNext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 35</value>
+  </data>
+  <data name="brnNext.Text" xml:space="preserve">
     <value>Dalje</value>
   </data>
-  <data name="rbEng.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 19</value>
-  </data>
-  <data name="rbEng.Text" xml:space="preserve">
-    <value>Englenski</value>
-  </data>
-  <data name="rbCro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 19</value>
-  </data>
-  <data name="rbCro.Text" xml:space="preserve">
-    <value>Hrvatski</value>
-  </data>
-  <data name="gbLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 14</value>
-  </data>
-  <data name="gbLanguage.Text" xml:space="preserve">
-    <value>Odaberi Jezik</value>
-  </data>
-  <data name="rbWomen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 19</value>
-  </data>
-  <data name="rbWomen.Text" xml:space="preserve">
-    <value>Žensko</value>
-  </data>
-  <data name="rbMen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 19</value>
-  </data>
-  <data name="rbMen.Text" xml:space="preserve">
-    <value>Muško</value>
-  </data>
-  <data name="gbChampionship.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 120</value>
-  </data>
-  <data name="gbChampionship.Text" xml:space="preserve">
-    <value>Odaberi Prvenstvo</value>
-  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>232, 287</value>
+    <value>204, 109</value>
   </data>
 </root>

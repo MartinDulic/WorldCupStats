@@ -69,7 +69,7 @@ namespace DAL.Model
         [JsonProperty("tactics", NullValueHandling = NullValueHandling.Ignore)]
         public string? Tactics { get; set; }
 
-        [JsonProperty   ("starting_eleven", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("starting_eleven", NullValueHandling = NullValueHandling.Ignore)]
         public List<Player>? StartingEleven { get; set; }
 
         [JsonProperty("substitutes", NullValueHandling = NullValueHandling.Ignore)]

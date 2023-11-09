@@ -1,3 +1,5 @@
+using MenForms.Controls;
+
 namespace MenForms
 {
     internal static class Program
@@ -14,6 +16,7 @@ namespace MenForms
             var sform = new StartingForm();
             sform.Show();
             Application.Run();
+
         }
     }
 }

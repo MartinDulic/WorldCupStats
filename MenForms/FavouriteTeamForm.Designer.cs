@@ -28,37 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FavouriteTeamForm));
             cbTeams = new ComboBox();
             lblChooseTeam = new Label();
+            brnNext = new Button();
             SuspendLayout();
             // 
             // cbTeams
             // 
+            resources.ApplyResources(cbTeams, "cbTeams");
             cbTeams.FormattingEnabled = true;
-            cbTeams.Location = new Point(221, 85);
             cbTeams.Name = "cbTeams";
-            cbTeams.Size = new Size(313, 23);
-            cbTeams.TabIndex = 0;
             // 
             // lblChooseTeam
             // 
-            lblChooseTeam.AutoSize = true;
-            lblChooseTeam.Location = new Point(306, 48);
+            resources.ApplyResources(lblChooseTeam, "lblChooseTeam");
             lblChooseTeam.Name = "lblChooseTeam";
-            lblChooseTeam.Size = new Size(130, 15);
-            lblChooseTeam.TabIndex = 1;
-            lblChooseTeam.Text = "Choose Favourite Team";
             lblChooseTeam.Click += label1_Click;
+            // 
+            // brnNext
+            // 
+            resources.ApplyResources(brnNext, "brnNext");
+            brnNext.Name = "brnNext";
+            brnNext.UseVisualStyleBackColor = true;
+            brnNext.Click += brnNext_Click;
             // 
             // FavouriteTeamForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            Controls.Add(brnNext);
             Controls.Add(lblChooseTeam);
             Controls.Add(cbTeams);
             Name = "FavouriteTeamForm";
-            Text = "FavouriteTeam";
             FormClosing += FavouriteTeamForm_FormClosing;
             Load += FavouriteTeamForm_Load;
             ResumeLayout(false);
@@ -69,5 +71,6 @@
 
         private ComboBox cbTeams;
         private Label lblChooseTeam;
+        private Button brnNext;
     }
 }

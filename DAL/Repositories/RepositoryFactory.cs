@@ -10,7 +10,9 @@ namespace DAL.Repositories
 {
     public static class RepositoryFactory
     {
-        public static ISettingsRepository GetSettingsRepository() => new SettingsFileRepository();
+        public static ISettingsRepository GetSettingsRepository() => new AppSettingsFileRepository();
+        public static IFavouriteSettingsRepository GetFavouriteSettingsRepository()
+            => new FavouriteSettingsFileRepository();
         public static IDataRepository GetDataRepository()
         {
             if (GetSettingsRepository().GetSettings().RepositoryType == RepoType.FILE)

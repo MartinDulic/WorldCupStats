@@ -12,18 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Resources\Settings.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Resources\Settings.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <Folder Include="Resources\Images\" />
   </ItemGroup>
 
 </Project>

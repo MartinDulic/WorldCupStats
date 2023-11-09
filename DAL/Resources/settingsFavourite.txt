@@ -1,0 +1,2 @@
+favouriteTeam:Belgium (BEL)
+favouritePlayers:,,

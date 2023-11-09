@@ -1,4 +1,5 @@
-﻿using DAL.Model.Enums;
+﻿using DAL.Model;
+using DAL.Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace DAL.Settings
         public RepoType RepositoryType { get; set; }
         public Language Language { get; set; }
         public SelectedChampionship SelectedChampionship { get; set; }
+        
 
     }
 }
