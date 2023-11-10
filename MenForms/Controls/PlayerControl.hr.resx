@@ -248,7 +248,7 @@
   <data name="imgPlayerImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        uwAADbsB9FZw8gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGy6SURBVHhe7d0H
+        ugAADboBJhGSFgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGy6SURBVHhe7d0H
         mBXlvT/wqyaaxETTY25ibpJ/kpub5OZqbLEkUmxILwtsX1hYttGLCiIoiGIBRKyoKAhiQQQFKSoqxYKU
         pSq9s5Wt2BDe/++d3bPMzvmePW3OnDLfe5/Pg/ntOWfemTPP+33PlHf+QylFRAmgZXLetS2T8ye2TCl4
         vmVywYpWKfk7WqUUVLZKLtzcOqXgFfnvcdelFbYYO3bsmej9ROQusEhE8UOCPkvCfbtQAdrZKjW/b1LS
@@ -724,6 +724,12 @@
   </data>
   <data name="imgPlayerImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 193</value>
+  </data>
+  <data name="addToFavouriteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Add Favourite</value>
+  </data>
+  <data name="cmsAddFavourite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 48</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>512, 200</value>

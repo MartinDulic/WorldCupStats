@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayerControl));
             lblName = new Label();
             lblPlayerName = new Label();
@@ -39,8 +40,11 @@
             lblCapitain = new Label();
             imgFavourite = new PictureBox();
             imgPlayerImage = new PictureBox();
+            cmsAddFavourite = new ContextMenuStrip(components);
+            addToFavouriteToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)imgFavourite).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgPlayerImage).BeginInit();
+            cmsAddFavourite.SuspendLayout();
             SuspendLayout();
             // 
             // lblName
@@ -95,6 +99,18 @@
             imgPlayerImage.Name = "imgPlayerImage";
             imgPlayerImage.TabStop = false;
             // 
+            // cmsAddFavourite
+            // 
+            resources.ApplyResources(cmsAddFavourite, "cmsAddFavourite");
+            cmsAddFavourite.Items.AddRange(new ToolStripItem[] { addToFavouriteToolStripMenuItem });
+            cmsAddFavourite.Name = "cmsAddFavourite";
+            // 
+            // addToFavouriteToolStripMenuItem
+            // 
+            resources.ApplyResources(addToFavouriteToolStripMenuItem, "addToFavouriteToolStripMenuItem");
+            addToFavouriteToolStripMenuItem.Name = "addToFavouriteToolStripMenuItem";
+            addToFavouriteToolStripMenuItem.Click += addToFavouriteToolStripMenuItem_Click;
+            // 
             // PlayerControl
             // 
             resources.ApplyResources(this, "$this");
@@ -112,6 +128,7 @@
             Name = "PlayerControl";
             ((System.ComponentModel.ISupportInitialize)imgFavourite).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgPlayerImage).EndInit();
+            cmsAddFavourite.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -128,6 +145,8 @@
         private Label lblCapitain;
         private PictureBox imgFavourite;
         private PictureBox imgPlayerImage;
+        private ContextMenuStrip cmsAddFavourite;
+        private ToolStripMenuItem addToFavouriteToolStripMenuItem;
 
         public string PlayerNameLabel
         {

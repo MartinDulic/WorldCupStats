@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Resources;
 using System.Diagnostics;
-using DAL;
 using DAL.Model.Enums;
+using DAL;
 
 namespace MenForms
 {

@@ -1,4 +1,6 @@
 ﻿using DAL;
+using DAL.Model;
+using DAL.Repositories;
 using MenForms.Controls;
 using System;
 using System.Collections.Generic;
@@ -14,8 +16,11 @@ namespace MenForms
 {
     public partial class FavouritePlayersForm : Form
     {
+        static IDataRepository dataRepository = RepositoryFactory.GetDataRepository();
+        static ISet<MatchData> matchData = dataRepository.GetAllManMatchData();
         public FavouritePlayersForm()
         {
+            /*
             try
             {
                 var playerControl = new PlayerControl();
@@ -25,7 +30,7 @@ namespace MenForms
             {
 
                 throw;
-            }
+            }*/
 
             InitializeComponent();
         }
@@ -34,6 +39,12 @@ namespace MenForms
         {
             Dispose();
             Utils.KillProccess(Utils.PROCCES_NAME);
+        }
+
+        private void FavouritePlayersForm_Load(object sender, EventArgs e)
+        {
+            //TODO
+            //implement dataFactory which gets players, refactor exsisting forms
         }
     }
 }

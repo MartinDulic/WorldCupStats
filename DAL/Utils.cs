@@ -55,10 +55,12 @@ namespace DAL
             if (tag == "hr-HR")
             {
                 settings.Language = Model.Enums.Language.CROATIAN;
-            } else if (tag == "en-US")
+            }
+            else if (tag == "en-US")
             {
                 settings.Language = Model.Enums.Language.ENGLISH;
-            } else
+            }
+            else
             {
                 throw new Exception("Utils: Invalid tag");
             }
@@ -77,6 +79,8 @@ namespace DAL
                 process.Kill();
             }
         }
+
+
 
     }
 }

@@ -1,2 +1,2 @@
-favouriteTeam:Belgium (BEL)
+favouriteTeam:Korea Republic (KOR)
 favouritePlayers:,,
