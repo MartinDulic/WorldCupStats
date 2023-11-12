@@ -23,6 +23,6 @@ namespace DAL.Repositories
         }
         public static IDataRepository GetFileRepository() => new FileDataRepository();
         public static IDataRepository GetApiRepository() => new ApiDataRepository();
-
+        public static IPlayerPictureRepository GetPlayerPictureRepository() => new PlayerPictureFileRepo();
     }
 }

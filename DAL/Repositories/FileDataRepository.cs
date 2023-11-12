@@ -27,7 +27,6 @@ namespace DAL.Repositories
 
         public ISet<MatchData> GetAllWomanMatchData() => Utils.ReadJsonFile<ISet<MatchData>>(WOMEN_RESULTS);
 
-
         public ISet<CountryTeam> GetAllWomenCountryTeamData() => Utils.ReadJsonFile<ISet<CountryTeam>>(WOMEN_TEAMS);
 
 

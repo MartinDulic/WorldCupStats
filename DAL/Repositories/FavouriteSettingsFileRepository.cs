@@ -11,8 +11,7 @@ namespace DAL.Repositories
 {
     internal class FavouriteSettingsFileRepository : IFavouriteSettingsRepository
     {
-        private const char DELIMITER = ':';
-        private const char LIST_DELIMITER = ',';
+        
         private const string SETTINGS_FILE_PATH = @"..\..\..\..\DAL\Resources\settingsFavourite.txt";
         private const string SETTING_TYPE_1 = "favouriteTeam";
         private const string SETTING_TYPE_2 = "favouritePlayers";
@@ -21,10 +20,12 @@ namespace DAL.Repositories
         {
             if (!File.Exists(SETTINGS_FILE_PATH))
             {
+                
                 IList<string> settings = new List<string>
                 {
-                    SETTING_TYPE_1 + DELIMITER + "null",
-                    SETTING_TYPE_2 + DELIMITER + "null,null,null"
+                    SETTING_TYPE_1 + Utils.DELIMITER + "null",
+                    SETTING_TYPE_2 + Utils.DELIMITER + Player.DEAFULT_NAME + Utils.LIST_DELIMITER
+                    + Player.DEAFULT_NAME + Utils.LIST_DELIMITER + Player.DEAFULT_NAME
 
                 };
                 File.WriteAllLines(SETTINGS_FILE_PATH, settings);
@@ -49,30 +50,18 @@ namespace DAL.Repositories
         private IList<Player> ParseFavouritePlayers(string line)
         {
             var favouritePlayers = new List<Player>();
-            string[] values = GetValuesFromLine(line);
-            ISet<MatchData> matches = RepositoryFactory.GetDataRepository().GetAllManMatchData();
-            ISet<TeamStatistics> stats = new HashSet<TeamStatistics>();
-            ISet<Player> players = new HashSet<Player>();
-            foreach (MatchData matchData in matches)
-            {
-                stats.Add(matchData.AwayTeamStatistics);
-                stats.Add(matchData.HomeTeamStatistics);
-
-            }
-            foreach (var stat in stats)
-            {
-                foreach (var p in stat.StartingEleven)
-                {
-                    players.Add(p);
-                }
-                foreach (var p in stat.Substitutes)
-                {
-                    players.Add(p);
-                }
-            }
+            string[] values = Utils.GetValuesFromLine(line);
+            ISet<Player> players = DataFactory.Players;
+            
             foreach (string s in values) {
             
                 Player player = players.FirstOrDefault(p => p.Name == s);
+                /*if (player is null)
+                {
+                    player = new Player();
+                    player.Name = Player.DEAFULT_NAME;
+                }*/
+
                 favouritePlayers.Add(player);
 
             }
@@ -81,7 +70,7 @@ namespace DAL.Repositories
 
         private CountryTeam ParseFavouriteTeam(string line)
         {
-            string value = GetValueFromLine(line);
+            string value = Utils.GetValueFromLine(line);
 
             var team = RepositoryFactory.GetDataRepository().GetAllMenCountryTeamData().FirstOrDefault(t => t.CountryName == value);
             return team;
@@ -96,28 +85,19 @@ namespace DAL.Repositories
                 playersString += favouriteSettings.FavouritePlayers.ElementAt(i);
                 if(i!= favouriteSettings.FavouritePlayers.Count - 1)
                 {
-                    playersString += LIST_DELIMITER;
+                    playersString += Utils.LIST_DELIMITER;
                 }
 
             }
             IList<string> settings = new List<string>
             {
-                SETTING_TYPE_1 + DELIMITER + favouriteSettings.FavouriteTeam.ToString(),
-                SETTING_TYPE_2 + DELIMITER + playersString
+                SETTING_TYPE_1 + Utils.DELIMITER + favouriteSettings.FavouriteTeam.CountryName,
+                SETTING_TYPE_2 + Utils.DELIMITER + playersString
             };
             File.WriteAllLines(SETTINGS_FILE_PATH, settings);
         }
 
-        private string GetValueFromLine(string line)
-        {
-            string[] parts = line.Split(DELIMITER);
-            return parts[1].Trim();
-        }
-        private string[] GetValuesFromLine(string line)
-        {
-            string[] parts = line.Split(DELIMITER);
-            string[] values = parts[1].Split(LIST_DELIMITER);
-            return values;
-        }
+
+
     }
 }

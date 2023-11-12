@@ -42,6 +42,7 @@
             imgPlayerImage = new PictureBox();
             cmsAddFavourite = new ContextMenuStrip(components);
             addToFavouriteToolStripMenuItem = new ToolStripMenuItem();
+            editPictureToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)imgFavourite).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgPlayerImage).BeginInit();
             cmsAddFavourite.SuspendLayout();
@@ -102,7 +103,7 @@
             // cmsAddFavourite
             // 
             resources.ApplyResources(cmsAddFavourite, "cmsAddFavourite");
-            cmsAddFavourite.Items.AddRange(new ToolStripItem[] { addToFavouriteToolStripMenuItem });
+            cmsAddFavourite.Items.AddRange(new ToolStripItem[] { addToFavouriteToolStripMenuItem, editPictureToolStripMenuItem });
             cmsAddFavourite.Name = "cmsAddFavourite";
             // 
             // addToFavouriteToolStripMenuItem
@@ -111,10 +112,17 @@
             addToFavouriteToolStripMenuItem.Name = "addToFavouriteToolStripMenuItem";
             addToFavouriteToolStripMenuItem.Click += addToFavouriteToolStripMenuItem_Click;
             // 
+            // editPictureToolStripMenuItem
+            // 
+            resources.ApplyResources(editPictureToolStripMenuItem, "editPictureToolStripMenuItem");
+            editPictureToolStripMenuItem.Name = "editPictureToolStripMenuItem";
+            editPictureToolStripMenuItem.Click += editPictureToolStripMenuItem_Click;
+            // 
             // PlayerControl
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             Controls.Add(imgPlayerImage);
             Controls.Add(imgFavourite);
             Controls.Add(lblPlayerCapitain);
@@ -126,6 +134,8 @@
             Controls.Add(lblPlayerName);
             Controls.Add(lblName);
             Name = "PlayerControl";
+            MouseClick += PlayerControl_MouseClick;
+            MouseDown += PlayerControl_MouseDown;
             ((System.ComponentModel.ISupportInitialize)imgFavourite).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgPlayerImage).EndInit();
             cmsAddFavourite.ResumeLayout(false);
@@ -147,6 +157,7 @@
         private PictureBox imgPlayerImage;
         private ContextMenuStrip cmsAddFavourite;
         private ToolStripMenuItem addToFavouriteToolStripMenuItem;
+        private ToolStripMenuItem editPictureToolStripMenuItem;
 
         public string PlayerNameLabel
         {
@@ -178,5 +189,10 @@
             set { imgPlayerImage.Image = value; }
         }
 
+        public bool FavouriteStar
+        {
+            get => imgFavourite.Visible;
+            set => imgFavourite.Visible = value;
+        }
     }
 }

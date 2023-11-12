@@ -19,16 +19,16 @@ internal class Program
 
 		try
 		{
-			IFavouriteSettingsRepository favouriteSettingsRepository = 
-				RepositoryFactory.GetFavouriteSettingsRepository();
-			var settings = favouriteSettingsRepository.GetSettings();
-            Console.WriteLine(settings);
+            DataFactory.FavouriteSettings.FavouritePlayers.ToList().ForEach(player =>
+            {
+                Console.WriteLine("player:" + player.ToString());
+            });
 
         }
-        catch (Exception e)
+        catch (Exception)
 		{
 
-			Console.WriteLine(e.Message);
+            throw;
 			
 		}
 

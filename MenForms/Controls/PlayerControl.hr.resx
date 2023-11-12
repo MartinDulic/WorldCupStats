@@ -239,7 +239,7 @@
     <value>NoControl</value>
   </data>
   <data name="imgFavourite.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 147</value>
+    <value>540, 145</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="imgFavourite.Visible" type="System.Boolean, mscorlib">
@@ -728,10 +728,16 @@
   <data name="addToFavouriteToolStripMenuItem.Text" xml:space="preserve">
     <value>Add Favourite</value>
   </data>
+  <data name="editPictureToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="editPictureToolStripMenuItem.Text" xml:space="preserve">
+    <value>Edit Picture</value>
+  </data>
   <data name="cmsAddFavourite.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 48</value>
+    <value>181, 70</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>512, 200</value>
+    <value>600, 200</value>
   </data>
 </root>

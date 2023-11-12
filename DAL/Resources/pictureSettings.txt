@@ -1,0 +1,3 @@
+ABDULLAH ALMUAIOUF;C:\Users\PREDATOR\Desktop\Projects\OOP .NET Projekt\WorldCupStats\DAL\Resources\Images\icon7.jpg
+OSAMA HAWSAWI;C:\Users\PREDATOR\Desktop\Projects\OOP .NET Projekt\WorldCupStats\DAL\Resources\Images\icon4.png
+OMAR HAWSAWI;C:\Users\PREDATOR\Desktop\Projects\OOP .NET Projekt\WorldCupStats\DAL\Resources\Images\icon8.png

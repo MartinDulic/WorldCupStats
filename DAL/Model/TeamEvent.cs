@@ -20,5 +20,16 @@ namespace DAL.Model
 
         [JsonProperty("time", NullValueHandling = NullValueHandling.Ignore)]
         public string? Time { get; set; }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is TeamEvent @event &&
+                   Id == @event.Id;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id);
+        }
     }
 }

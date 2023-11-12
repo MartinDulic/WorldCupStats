@@ -1,2 +1,2 @@
-favouriteTeam:Korea Republic (KOR)
-favouritePlayers:,,
+favouriteTeam:Korea Republic
+favouritePlayers:

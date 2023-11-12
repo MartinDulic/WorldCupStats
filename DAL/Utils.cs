@@ -17,7 +17,8 @@ namespace DAL
     public static class Utils
     {
         public static string PROCCES_NAME = "MenForms.exe";
-
+        public const char DELIMITER = ':';
+        public const char LIST_DELIMITER = ',';
         public static T? GetJsonObjectFromUrl<T>(string url)
         {
             Console.WriteLine("Utils: " + url);
@@ -80,7 +81,17 @@ namespace DAL
             }
         }
 
-
+        public static string GetValueFromLine(string line)
+        {
+            string[] parts = line.Split(DELIMITER);
+            return parts[1].Trim();
+        }
+        public static string[] GetValuesFromLine(string line)
+        {
+            string[] parts = line.Split(DELIMITER);
+            string[] values = parts[1].Split(LIST_DELIMITER);
+            return values;
+        }
 
     }
 }

@@ -9,6 +9,7 @@ namespace DAL.Model
 {
     public class Player
     {
+        public static string DEAFULT_NAME = "null";
         [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
         public string? Name { get; set; }
 
@@ -21,10 +22,23 @@ namespace DAL.Model
         [JsonProperty("position", NullValueHandling = NullValueHandling.Ignore)]
         public string? Position { get; set; }
 
+        public override bool Equals(object? obj)
+        {
+            return obj is Player player &&
+                   Name == player.Name;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Name);
+        }
+
         public override string? ToString()
         {
             return $"{Name}";
         }
+
+
     }
 
 }

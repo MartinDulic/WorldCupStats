@@ -117,70 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;brnNext.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FavouriteTeamForm</value>
-  </data>
-  <data name="brnNext.Text" xml:space="preserve">
-    <value>Next</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="brnNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 288</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="&gt;&gt;cbTeams.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblChooseTeam.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="cbTeams.Size" type="System.Drawing.Size, System.Drawing">
-    <value>313, 23</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cbTeams.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;cbTeams.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblChooseTeam.Text" xml:space="preserve">
-    <value>Choose Favourite Team</value>
-  </data>
-  <data name="&gt;&gt;lblChooseTeam.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lblChooseTeam.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 15</value>
-  </data>
-  <data name="brnNext.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblChooseTeam.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblChooseTeam.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
-  </data>
-  <data name="&gt;&gt;cbTeams.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblChooseTeam.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="cbTeams.Location" type="System.Drawing.Point, System.Drawing">
     <value>221, 85</value>
-  </data>
-  <data name="&gt;&gt;lblChooseTeam.Name" xml:space="preserve">
-    <value>lblChooseTeam</value>
   </data>
   <data name="lblChooseTeam.Location" type="System.Drawing.Point, System.Drawing">
     <value>306, 48</value>
@@ -188,23 +127,84 @@
   <data name="brnNext.Size" type="System.Drawing.Size, System.Drawing">
     <value>313, 56</value>
   </data>
+  <data name="&gt;&gt;lblChooseTeam.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblChooseTeam.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>FavouriteTeam</value>
+  </data>
+  <data name="&gt;&gt;lblChooseTeam.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="brnNext.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbTeams.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FavouriteTeamForm</value>
+  </data>
+  <data name="lblChooseTeam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 15</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;brnNext.Name" xml:space="preserve">
-    <value>brnNext</value>
+  <data name="lblChooseTeam.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;brnNext.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;brnNext.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;cbTeams.Name" xml:space="preserve">
     <value>cbTeams</value>
   </data>
-  <data name="&gt;&gt;brnNext.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;brnNext.Name" xml:space="preserve">
+    <value>brnNext</value>
+  </data>
+  <data name="&gt;&gt;brnNext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbTeams.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 450</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="cbTeams.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 23</value>
+  </data>
+  <data name="lblChooseTeam.Text" xml:space="preserve">
+    <value>Choose Favourite Team</value>
+  </data>
+  <data name="&gt;&gt;brnNext.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="brnNext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>221, 288</value>
+  </data>
+  <data name="cbTeams.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="brnNext.Text" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="&gt;&gt;cbTeams.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblChooseTeam.Name" xml:space="preserve">
+    <value>lblChooseTeam</value>
+  </data>
+  <data name="lblChooseTeam.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>hr</value>
