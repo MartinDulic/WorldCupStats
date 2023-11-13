@@ -13,6 +13,7 @@ using System.Resources;
 using System.Diagnostics;
 using DAL.Model.Enums;
 using DAL;
+using System.Globalization;
 
 namespace MenForms
 {
@@ -26,15 +27,28 @@ namespace MenForms
         public FavouriteTeamForm()
         {
             InitializeComponent();
-            if (appSettingsRepo.GetSettings().Language == Language.CROATIAN)
-            {
-
-                lblChooseTeam.Text = rm.GetString("lblChooseTeam.Text");
-                brnNext.Text = rm.GetString("brnNext.Text");
-            }
+            ChangeCulture(Utils.GetLanguageTagFromSettings(DataFactory.AppSettings));
 
         }
+        private void ChangeCulture(string cultureName)
+        {
+            CultureInfo newCulture = new CultureInfo(cultureName);
+            Thread.CurrentThread.CurrentCulture = newCulture;
+            Thread.CurrentThread.CurrentUICulture = newCulture;
 
+            // Update text of controls
+            UpdateControlTexts();
+
+            // Invalidate the form to ensure it's redrawn with the updated text
+            Invalidate();
+            Refresh();
+        }
+
+        private void UpdateControlTexts()
+        {
+            lblChooseTeam.Text = rm.GetString("lblChooseTeam.Text");
+            brnNext.Text = rm.GetString("brnNext.Text");
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 

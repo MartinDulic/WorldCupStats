@@ -44,10 +44,6 @@ namespace MenForms
             Thread.CurrentThread.CurrentCulture = newCulture;
             Thread.CurrentThread.CurrentUICulture = newCulture;
 
-
-
-
-
             // Update text of controls
             UpdateControlTexts();
 
@@ -81,8 +77,6 @@ namespace MenForms
 
                     var form = new FavouriteTeamForm();
                     form.Show();
-
-
 
                 }
                 else

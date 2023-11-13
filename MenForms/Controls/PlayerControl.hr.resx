@@ -725,17 +725,20 @@
   <data name="imgPlayerImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 193</value>
   </data>
+  <data name="cmsAddFavourite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 48</value>
+  </data>
+  <data name="addToFavouriteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 22</value>
+  </data>
   <data name="addToFavouriteToolStripMenuItem.Text" xml:space="preserve">
-    <value>Add Favourite</value>
+    <value>Dodaj u omiljene</value>
   </data>
   <data name="editPictureToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>173, 22</value>
   </data>
   <data name="editPictureToolStripMenuItem.Text" xml:space="preserve">
-    <value>Edit Picture</value>
-  </data>
-  <data name="cmsAddFavourite.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 70</value>
+    <value>Odaberi novu sliku</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>600, 200</value>

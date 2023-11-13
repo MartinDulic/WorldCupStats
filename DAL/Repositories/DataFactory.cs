@@ -204,65 +204,6 @@ namespace DAL.Repositories
             return playersData;
         }
 
-        /*
-        public static IDictionary<string,int> PlayerGoals
-        {
-            get
-            {
-                IDictionary<string,int> playerGoals = new Dictionary<string,int>();
-                foreach (var item in Events)
-                {
-                    if (item.TypeOfEvent == "goal")
-                    {
-                        if (!playerGoals.ContainsKey(item.Player))
-                        {
-                            playerGoals.Add(item.Player, 1);
-                        } else
-                        {
-                            int value = playerGoals[item.Player];
-                            value++;
-                            playerGoals[item.Player] = value;
-                        }
-                    }
-                }
-                var sortedList = playerGoals.ToList();
-                sortedList.Sort((pair1, pair2) => pair2.Value.CompareTo(pair1.Value));
-
-                // Convert the sorted list back to a dictionary
-                Dictionary<string, int> sortedDictionary = sortedList.ToDictionary(pair => pair.Key, pair => pair.Value);
-
-                return sortedDictionary;
-            }
-        }
-        public static IDictionary<string,int> PlayerYellowCards
-        {
-            get
-            {
-                IDictionary<string,int> playerYellowCards = new Dictionary<string,int>();
-                foreach (var item in Events)
-                {
-                    if (item.TypeOfEvent == "yellow-card")
-                    {
-                        if (!playerYellowCards.ContainsKey(item.Player))
-                        {
-                            playerYellowCards.Add(item.Player, 1);
-                        } else
-                        {
-                            int value = playerYellowCards[item.Player];
-                            value++;
-                            playerYellowCards[item.Player] = value;
-                        }
-                    }
-                }
-                var sortedList = playerYellowCards.ToList();
-                sortedList.Sort((pair1, pair2) => pair2.Value.CompareTo(pair1.Value));
-
-                Dictionary<string, int> sortedDictionary = sortedList.ToDictionary(pair => pair.Key, pair => pair.Value);
-
-                return sortedDictionary;
-            }
-        }
-        */
         public static IDictionary<string,string> PlayerPitcurePaths
         {
             get => pictureRepository.GetAllPicturePaths();

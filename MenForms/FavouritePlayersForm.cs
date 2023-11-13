@@ -7,23 +7,47 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Resources;
 
 namespace MenForms
 {
     public partial class FavouritePlayersForm : Form
     {
+        private ResourceManager rm = new ResourceManager("MenForms.FavouritePlayersForm", typeof(FavouritePlayersForm).Assembly);
 
         public FavouritePlayersForm()
         {
 
             InitializeComponent();
+            ChangeCulture(Utils.GetLanguageTagFromSettings(DataFactory.AppSettings));
 
         }
+        private void ChangeCulture(string cultureName)
+        {
+            CultureInfo newCulture = new CultureInfo(cultureName);
+            Thread.CurrentThread.CurrentCulture = newCulture;
+            Thread.CurrentThread.CurrentUICulture = newCulture;
 
+            // Update text of controls
+            UpdateControlTexts();
+
+            // Invalidate the form to ensure it's redrawn with the updated text
+            Invalidate();
+            Refresh();
+        }
+
+        private void UpdateControlTexts()
+        {
+            btnNext.Text = rm.GetString("btnNext.Text");
+            lblFavouritePlayers.Text = rm.GetString("lblFavouritePlayers.Text");
+            lblLoading.Text = rm.GetString("lblLoading.Text");
+            lblPlayers.Text = rm.GetString("lblPlayers.Text");
+        }
         private void FavouritePlayersForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Dispose();
@@ -104,17 +128,17 @@ namespace MenForms
                         DataFactory.PlayerPitcurePaths.TryGetValue(control.PlayerNameLabel, out path);
 
                         control.PlayerImagePictureBox = Image.FromFile(path);
-                        
+
                     }
                     else
                     {
                         control.PlayerImagePictureBox = Image.FromFile(DataFactory.PLAYER_PICTURES_PATH + 1 +
                             DataFactory.PLAYER_PICTURES_EXTENSION);
                     }
-                        control.MouseDown += Control_MouseDown;
-                        control.MouseUp += Control_MouseUp;
+                    control.MouseDown += Control_MouseDown;
+                    control.MouseUp += Control_MouseUp;
 
-                        controls.Add(control);
+                    controls.Add(control);
                 }
 
                 return controls.ToArray();

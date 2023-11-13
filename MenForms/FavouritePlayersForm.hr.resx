@@ -117,13 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblAttendance.Text" xml:space="preserve">
-    <value>Broj posjetitelja:</value>
+  <data name="btnNext.Text" xml:space="preserve">
+    <value>Dalje</value>
   </data>
-  <data name="lblVenue.Text" xml:space="preserve">
-    <value>Mjesto :</value>
+  <data name="lblFavouritePlayers.Text" xml:space="preserve">
+    <value>Omiljeni Igrači</value>
   </data>
-  <data name="lblVs.Text" xml:space="preserve">
-    <value>Protiv</value>
+  <data name="lblLoading.Text" xml:space="preserve">
+    <value>Učitavanje</value>
+  </data>
+  <data name="lblPlayers.Text" xml:space="preserve">
+    <value>Igrači</value>
   </data>
 </root>

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RankForm));
             lblPlayersGoalsScored = new Label();
             flpGoalsScored = new FlowLayoutPanel();
             lblRankingsBy = new Label();
@@ -36,86 +38,76 @@
             flpAttendance = new FlowLayoutPanel();
             lblVenuesByAttendance = new Label();
             lblLoading = new Label();
+            btnNext = new Button();
+            cmsPrint = new ContextMenuStrip(components);
+            printPDFToolStripMenuItem = new ToolStripMenuItem();
+            cmsPrint.SuspendLayout();
             SuspendLayout();
             // 
             // lblPlayersGoalsScored
             // 
-            lblPlayersGoalsScored.AutoSize = true;
-            lblPlayersGoalsScored.Font = new Font("Sitka Banner", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblPlayersGoalsScored.Location = new Point(129, 36);
+            resources.ApplyResources(lblPlayersGoalsScored, "lblPlayersGoalsScored");
             lblPlayersGoalsScored.Name = "lblPlayersGoalsScored";
-            lblPlayersGoalsScored.Size = new Size(94, 23);
-            lblPlayersGoalsScored.TabIndex = 1;
-            lblPlayersGoalsScored.Text = "Goals Scored";
             // 
             // flpGoalsScored
             // 
-            flpGoalsScored.AutoScroll = true;
-            flpGoalsScored.Location = new Point(12, 62);
+            resources.ApplyResources(flpGoalsScored, "flpGoalsScored");
             flpGoalsScored.Name = "flpGoalsScored";
-            flpGoalsScored.Size = new Size(350, 431);
-            flpGoalsScored.TabIndex = 2;
             // 
             // lblRankingsBy
             // 
-            lblRankingsBy.AutoSize = true;
-            lblRankingsBy.Font = new Font("Sitka Banner", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblRankingsBy.Location = new Point(510, 9);
+            resources.ApplyResources(lblRankingsBy, "lblRankingsBy");
             lblRankingsBy.Name = "lblRankingsBy";
-            lblRankingsBy.Size = new Size(64, 23);
-            lblRankingsBy.TabIndex = 3;
-            lblRankingsBy.Text = "Rank By";
             // 
             // flpYellowCards
             // 
-            flpYellowCards.AutoScroll = true;
-            flpYellowCards.Location = new Point(375, 62);
+            resources.ApplyResources(flpYellowCards, "flpYellowCards");
             flpYellowCards.Name = "flpYellowCards";
-            flpYellowCards.Size = new Size(350, 431);
-            flpYellowCards.TabIndex = 4;
             // 
             // lblYellowCards
             // 
-            lblYellowCards.AutoSize = true;
-            lblYellowCards.Font = new Font("Sitka Banner", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblYellowCards.Location = new Point(499, 36);
+            resources.ApplyResources(lblYellowCards, "lblYellowCards");
             lblYellowCards.Name = "lblYellowCards";
-            lblYellowCards.Size = new Size(94, 23);
-            lblYellowCards.TabIndex = 3;
-            lblYellowCards.Text = "Yellow Cards";
             // 
             // flpAttendance
             // 
-            flpAttendance.AutoScroll = true;
-            flpAttendance.Location = new Point(738, 62);
+            resources.ApplyResources(flpAttendance, "flpAttendance");
             flpAttendance.Name = "flpAttendance";
-            flpAttendance.Size = new Size(483, 431);
-            flpAttendance.TabIndex = 6;
             // 
             // lblVenuesByAttendance
             // 
-            lblVenuesByAttendance.AutoSize = true;
-            lblVenuesByAttendance.Font = new Font("Sitka Banner", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblVenuesByAttendance.Location = new Point(921, 36);
+            resources.ApplyResources(lblVenuesByAttendance, "lblVenuesByAttendance");
             lblVenuesByAttendance.Name = "lblVenuesByAttendance";
-            lblVenuesByAttendance.Size = new Size(82, 23);
-            lblVenuesByAttendance.TabIndex = 5;
-            lblVenuesByAttendance.Text = "Attendance";
             // 
             // lblLoading
             // 
-            lblLoading.AutoSize = true;
-            lblLoading.Location = new Point(510, 548);
+            resources.ApplyResources(lblLoading, "lblLoading");
             lblLoading.Name = "lblLoading";
-            lblLoading.Size = new Size(59, 15);
-            lblLoading.TabIndex = 7;
-            lblLoading.Text = "Loading...";
+            // 
+            // btnNext
+            // 
+            resources.ApplyResources(btnNext, "btnNext");
+            btnNext.Name = "btnNext";
+            btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnNext_Click;
+            // 
+            // cmsPrint
+            // 
+            resources.ApplyResources(cmsPrint, "cmsPrint");
+            cmsPrint.Items.AddRange(new ToolStripItem[] { printPDFToolStripMenuItem });
+            cmsPrint.Name = "contextMenuStrip1";
+            // 
+            // printPDFToolStripMenuItem
+            // 
+            resources.ApplyResources(printPDFToolStripMenuItem, "printPDFToolStripMenuItem");
+            printPDFToolStripMenuItem.Name = "printPDFToolStripMenuItem";
+            printPDFToolStripMenuItem.Click += printPDFToolStripMenuItem_Click;
             // 
             // RankForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1233, 627);
+            Controls.Add(btnNext);
             Controls.Add(lblLoading);
             Controls.Add(flpAttendance);
             Controls.Add(lblVenuesByAttendance);
@@ -125,8 +117,9 @@
             Controls.Add(flpGoalsScored);
             Controls.Add(lblPlayersGoalsScored);
             Name = "RankForm";
-            Text = "RankForm";
             Load += RankForm_Load;
+            MouseClick += RankForm_MouseClick;
+            cmsPrint.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -140,5 +133,8 @@
         private FlowLayoutPanel flpAttendance;
         private Label lblVenuesByAttendance;
         private Label lblLoading;
+        private Button btnNext;
+        private ContextMenuStrip cmsPrint;
+        private ToolStripMenuItem printPDFToolStripMenuItem;
     }
 }

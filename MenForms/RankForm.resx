@@ -117,4 +117,303 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblPlayersGoalsScored.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;flpYellowCards.Name" xml:space="preserve">
+    <value>flpYellowCards</value>
+  </data>
+  <data name="&gt;&gt;flpGoalsScored.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblVenuesByAttendance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>921, 36</value>
+  </data>
+  <data name="&gt;&gt;lblYellowCards.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblRankingsBy.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;cmsPrint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblYellowCards.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblVenuesByAttendance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Sitka Banner, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
+    <value>contextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;flpGoalsScored.Name" xml:space="preserve">
+    <value>flpGoalsScored</value>
+  </data>
+  <data name="flpGoalsScored.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 431</value>
+  </data>
+  <data name="&gt;&gt;flpYellowCards.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblYellowCards.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lblVenuesByAttendance.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;flpGoalsScored.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="flpGoalsScored.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblVenuesByAttendance.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblPlayersGoalsScored.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnNext.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;flpYellowCards.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblPlayersGoalsScored.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 36</value>
+  </data>
+  <data name="lblVenuesByAttendance.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="flpAttendance.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;printPDFToolStripMenuItem.Name" xml:space="preserve">
+    <value>printPDFToolStripMenuItem</value>
+  </data>
+  <data name="lblLoading.Text" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="lblRankingsBy.Text" xml:space="preserve">
+    <value>Rank By</value>
+  </data>
+  <data name="&gt;&gt;flpYellowCards.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblPlayersGoalsScored.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Sitka Banner, 12pt, style=Bold</value>
+  </data>
+  <data name="lblLoading.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblYellowCards.Text" xml:space="preserve">
+    <value>Yellow Cards</value>
+  </data>
+  <data name="&gt;&gt;lblRankingsBy.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmsPrint.Name" xml:space="preserve">
+    <value>cmsPrint</value>
+  </data>
+  <data name="&gt;&gt;flpGoalsScored.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 48</value>
+  </data>
+  <data name="lblPlayersGoalsScored.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 23</value>
+  </data>
+  <data name="lblLoading.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;btnNext.Name" xml:space="preserve">
+    <value>btnNext</value>
+  </data>
+  <data name="flpAttendance.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblVenuesByAttendance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 23</value>
+  </data>
+  <data name="flpYellowCards.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="flpYellowCards.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 431</value>
+  </data>
+  <data name="lblRankingsBy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 23</value>
+  </data>
+  <data name="flpGoalsScored.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 62</value>
+  </data>
+  <data name="&gt;&gt;btnNext.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;flpAttendance.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnNext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>510, 542</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1233, 627</value>
+  </data>
+  <data name="&gt;&gt;lblPlayersGoalsScored.Name" xml:space="preserve">
+    <value>lblPlayersGoalsScored</value>
+  </data>
+  <data name="&gt;&gt;lblLoading.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblVenuesByAttendance.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblLoading.Location" type="System.Drawing.Point, System.Drawing">
+    <value>418, 552</value>
+  </data>
+  <data name="&gt;&gt;lblPlayersGoalsScored.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblPlayersGoalsScored.Text" xml:space="preserve">
+    <value>Goals Scored</value>
+  </data>
+  <data name="flpGoalsScored.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblVenuesByAttendance.Text" xml:space="preserve">
+    <value>Attendance</value>
+  </data>
+  <data name="lblRankingsBy.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="flpYellowCards.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblYellowCards.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRankingsBy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>510, 9</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="&gt;&gt;lblLoading.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;flpAttendance.Name" xml:space="preserve">
+    <value>flpAttendance</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>RankForm</value>
+  </data>
+  <data name="&gt;&gt;btnNext.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;printPDFToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblVenuesByAttendance.Name" xml:space="preserve">
+    <value>lblVenuesByAttendance</value>
+  </data>
+  <data name="flpYellowCards.Location" type="System.Drawing.Point, System.Drawing">
+    <value>375, 62</value>
+  </data>
+  <data name="lblRankingsBy.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="flpAttendance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 431</value>
+  </data>
+  <data name="lblYellowCards.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 23</value>
+  </data>
+  <data name="flpAttendance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>738, 62</value>
+  </data>
+  <data name="&gt;&gt;lblYellowCards.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblYellowCards.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Sitka Banner, 12pt, style=Bold</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>RankForm</value>
+  </data>
+  <data name="btnNext.Text" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="&gt;&gt;lblRankingsBy.Name" xml:space="preserve">
+    <value>lblRankingsBy</value>
+  </data>
+  <data name="&gt;&gt;lblRankingsBy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="printPDFToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;lblVenuesByAttendance.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblLoading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 15</value>
+  </data>
+  <data name="btnNext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 34</value>
+  </data>
+  <data name="printPDFToolStripMenuItem.Text" xml:space="preserve">
+    <value>Print PDF</value>
+  </data>
+  <data name="lblPlayersGoalsScored.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblLoading.Name" xml:space="preserve">
+    <value>lblLoading</value>
+  </data>
+  <data name="&gt;&gt;flpAttendance.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblPlayersGoalsScored.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;flpAttendance.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblRankingsBy.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Sitka Banner, 12pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;lblYellowCards.Name" xml:space="preserve">
+    <value>lblYellowCards</value>
+  </data>
+  <data name="lblYellowCards.Location" type="System.Drawing.Point, System.Drawing">
+    <value>499, 36</value>
+  </data>
+  <data name="&gt;&gt;lblLoading.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnNext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmsPrint.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>hr</value>
+  </metadata>
 </root>

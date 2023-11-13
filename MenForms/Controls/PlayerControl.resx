@@ -117,82 +117,246 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Sitka Small, 12pt, style=Bold</value>
   </data>
-  <data name="lblCapitain.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Sitka Small, 12pt, style=Bold</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblShirtNumber.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="imgPlayerImage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>397, 275</value>
-  </data>
-  <data name="&gt;&gt;lblPlayerName.Name" xml:space="preserve">
-    <value>lblPlayerName</value>
-  </data>
-  <data name="&gt;&gt;imgPlayerImage.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lblCapitain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 391</value>
-  </data>
-  <data name="lblName.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblPlayerShirtNumber.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="lblPosition.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 353</value>
-  </data>
-  <data name="&gt;&gt;lblPlayerName.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="lblCapitain.Text" xml:space="preserve">
-    <value>Capitain : </value>
-  </data>
-  <data name="&gt;&gt;imgFavourite.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblName.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;imgPlayerImage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="imgFavourite.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="&gt;&gt;lblName.Name" xml:space="preserve">
-    <value>lblName</value>
-  </data>
-  <data name="&gt;&gt;editPictureToolStripMenuItem.Name" xml:space="preserve">
-    <value>editPictureToolStripMenuItem</value>
-  </data>
-  <data name="lblPlayerShirtNumber.Text" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;lblCapitain.Name" xml:space="preserve">
-    <value>lblCapitain</value>
-  </data>
-  <data name="&gt;&gt;lblPlayerCapitain.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="lblName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 281</value>
   </data>
   <data name="lblName.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 24</value>
   </data>
-  <data name="&gt;&gt;imgPlayerImage.Name" xml:space="preserve">
-    <value>imgPlayerImage</value>
+  <data name="lblName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblName.Text" xml:space="preserve">
+    <value>Name : </value>
+  </data>
+  <data name="&gt;&gt;lblName.Name" xml:space="preserve">
+    <value>lblName</value>
+  </data>
+  <data name="&gt;&gt;lblName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblName.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lblPlayerName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPlayerName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Sitka Small, 12pt, style=Bold</value>
+  </data>
+  <data name="lblPlayerName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 281</value>
+  </data>
+  <data name="lblPlayerName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 24</value>
+  </data>
+  <data name="lblPlayerName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblPlayerName.Text" xml:space="preserve">
+    <value>(playerName)</value>
+  </data>
+  <data name="&gt;&gt;lblPlayerName.Name" xml:space="preserve">
+    <value>lblPlayerName</value>
+  </data>
+  <data name="&gt;&gt;lblPlayerName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPlayerName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblPlayerName.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblShirtNumber.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblShirtNumber.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Sitka Small, 12pt, style=Bold</value>
+  </data>
+  <data name="lblShirtNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 317</value>
+  </data>
+  <data name="lblShirtNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 24</value>
+  </data>
+  <data name="lblShirtNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblShirtNumber.Text" xml:space="preserve">
+    <value>Number : </value>
+  </data>
+  <data name="&gt;&gt;lblShirtNumber.Name" xml:space="preserve">
+    <value>lblShirtNumber</value>
+  </data>
+  <data name="&gt;&gt;lblShirtNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblShirtNumber.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblShirtNumber.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblPlayerShirtNumber.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPlayerShirtNumber.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Sitka Small, 12pt, style=Bold</value>
+  </data>
+  <data name="lblPlayerShirtNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 317</value>
+  </data>
+  <data name="lblPlayerShirtNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 24</value>
+  </data>
+  <data name="lblPlayerShirtNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblPlayerShirtNumber.Text" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;lblPlayerShirtNumber.Name" xml:space="preserve">
+    <value>lblPlayerShirtNumber</value>
+  </data>
+  <data name="&gt;&gt;lblPlayerShirtNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPlayerShirtNumber.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblPlayerShirtNumber.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblPosition.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPosition.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Sitka Small, 12pt, style=Bold</value>
+  </data>
+  <data name="lblPosition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 353</value>
+  </data>
+  <data name="lblPosition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 24</value>
   </data>
   <data name="lblPosition.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblPosition.Text" xml:space="preserve">
+    <value>Position :</value>
+  </data>
+  <data name="&gt;&gt;lblPosition.Name" xml:space="preserve">
+    <value>lblPosition</value>
+  </data>
+  <data name="&gt;&gt;lblPosition.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPosition.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblPosition.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblPlayerPosition.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPlayerPosition.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Sitka Small, 12pt, style=Bold</value>
+  </data>
+  <data name="lblPlayerPosition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 353</value>
+  </data>
+  <data name="lblPlayerPosition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 24</value>
+  </data>
+  <data name="lblPlayerPosition.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblPlayerPosition.Text" xml:space="preserve">
+    <value>(playerPosition)</value>
+  </data>
+  <data name="&gt;&gt;lblPlayerPosition.Name" xml:space="preserve">
+    <value>lblPlayerPosition</value>
+  </data>
+  <data name="&gt;&gt;lblPlayerPosition.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPlayerPosition.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblPlayerPosition.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblPlayerCapitain.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPlayerCapitain.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Sitka Small, 12pt, style=Bold</value>
+  </data>
+  <data name="lblPlayerCapitain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 391</value>
+  </data>
+  <data name="lblPlayerCapitain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 24</value>
+  </data>
+  <data name="lblPlayerCapitain.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblPlayerCapitain.Text" xml:space="preserve">
+    <value>(yes)</value>
+  </data>
+  <data name="&gt;&gt;lblPlayerCapitain.Name" xml:space="preserve">
+    <value>lblPlayerCapitain</value>
+  </data>
+  <data name="&gt;&gt;lblPlayerCapitain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPlayerCapitain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblPlayerCapitain.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblCapitain.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCapitain.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Sitka Small, 12pt, style=Bold</value>
+  </data>
+  <data name="lblCapitain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 391</value>
+  </data>
+  <data name="lblCapitain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 24</value>
+  </data>
+  <data name="lblCapitain.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblCapitain.Text" xml:space="preserve">
+    <value>Capitain : </value>
+  </data>
+  <data name="&gt;&gt;lblCapitain.Name" xml:space="preserve">
+    <value>lblCapitain</value>
+  </data>
+  <data name="&gt;&gt;lblCapitain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCapitain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblCapitain.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="imgFavourite.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -263,209 +427,30 @@
         7QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="&gt;&gt;lblPlayerPosition.Name" xml:space="preserve">
-    <value>lblPlayerPosition</value>
-  </data>
-  <data name="&gt;&gt;imgFavourite.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblName.Text" xml:space="preserve">
-    <value>Name : </value>
-  </data>
-  <data name="lblPosition.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;cmsAddFavourite.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblPlayerCapitain.Text" xml:space="preserve">
-    <value>(yes)</value>
-  </data>
-  <data name="lblPlayerCapitain.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="lblPlayerPosition.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lblPlayerShirtNumber.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lblPlayerShirtNumber.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Sitka Small, 12pt, style=Bold</value>
-  </data>
-  <data name="lblPlayerShirtNumber.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 24</value>
-  </data>
-  <data name="&gt;&gt;lblPlayerName.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lblShirtNumber.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 24</value>
-  </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>403, 418</value>
-  </data>
-  <data name="lblPlayerName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 24</value>
-  </data>
-  <data name="&gt;&gt;lblShirtNumber.Name" xml:space="preserve">
-    <value>lblShirtNumber</value>
+  <data name="imgFavourite.Location" type="System.Drawing.Point, System.Drawing">
+    <value>343, 365</value>
   </data>
   <data name="imgFavourite.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 50</value>
   </data>
-  <data name="lblPlayerCapitain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 391</value>
-  </data>
-  <data name="&gt;&gt;lblCapitain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblPlayerName.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblPlayerShirtNumber.Name" xml:space="preserve">
-    <value>lblPlayerShirtNumber</value>
-  </data>
-  <data name="lblPlayerShirtNumber.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblShirtNumber.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="imgPlayerImage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="lblPlayerShirtNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 317</value>
-  </data>
-  <data name="editPictureToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="lblPlayerCapitain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 24</value>
-  </data>
-  <data name="lblPlayerName.Text" xml:space="preserve">
-    <value>(playerName)</value>
-  </data>
-  <data name="&gt;&gt;lblPosition.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="imgFavourite.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
   <data name="imgFavourite.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="lblPlayerName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Sitka Small, 12pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;cmsAddFavourite.Name" xml:space="preserve">
-    <value>cmsAddFavourite</value>
-  </data>
   <data name="&gt;&gt;imgFavourite.Name" xml:space="preserve">
     <value>imgFavourite</value>
   </data>
-  <data name="lblPlayerName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 281</value>
+  <data name="&gt;&gt;imgFavourite.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblPlayerName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="&gt;&gt;lblPlayerPosition.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lblPlayerCapitain.Parent" xml:space="preserve">
+  <data name="&gt;&gt;imgFavourite.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="lblCapitain.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="lblPlayerShirtNumber.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="lblPlayerPosition.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Sitka Small, 12pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;lblPlayerPosition.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lblPlayerName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblPosition.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Sitka Small, 12pt, style=Bold</value>
-  </data>
-  <data name="lblShirtNumber.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblPlayerPosition.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 353</value>
-  </data>
-  <data name="lblPosition.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 24</value>
-  </data>
-  <data name="addToFavouriteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="lblPlayerPosition.Text" xml:space="preserve">
-    <value>(playerPosition)</value>
-  </data>
-  <data name="imgPlayerImage.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="lblPosition.Text" xml:space="preserve">
-    <value>Position :</value>
-  </data>
-  <data name="lblName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 281</value>
-  </data>
-  <data name="&gt;&gt;lblPlayerPosition.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblShirtNumber.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblName.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblPosition.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="imgPlayerImage.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="&gt;&gt;lblPlayerCapitain.Name" xml:space="preserve">
-    <value>lblPlayerCapitain</value>
-  </data>
-  <data name="lblShirtNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 317</value>
   </data>
   <data name="&gt;&gt;imgFavourite.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="lblPlayerPosition.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 24</value>
-  </data>
-  <data name="&gt;&gt;lblPlayerCapitain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>PlayerControl</value>
-  </data>
-  <data name="&gt;&gt;lblPlayerShirtNumber.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCapitain.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lblCapitain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lblPlayerCapitain.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="imgPlayerImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -938,58 +923,79 @@
         RK5CYII=
 </value>
   </data>
-  <data name="&gt;&gt;lblPosition.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="imgPlayerImage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <data name="&gt;&gt;editPictureToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="imgPlayerImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>397, 275</value>
   </data>
-  <data name="lblShirtNumber.Text" xml:space="preserve">
-    <value>Number : </value>
+  <data name="imgPlayerImage.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
-  <data name="lblPlayerCapitain.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Sitka Small, 12pt, style=Bold</value>
+  <data name="imgPlayerImage.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
-  <data name="lblCapitain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 24</value>
-  </data>
-  <data name="&gt;&gt;lblPosition.Name" xml:space="preserve">
-    <value>lblPosition</value>
-  </data>
-  <data name="&gt;&gt;addToFavouriteToolStripMenuItem.Name" xml:space="preserve">
-    <value>addToFavouriteToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;lblShirtNumber.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;addToFavouriteToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblPlayerPosition.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;imgPlayerImage.Name" xml:space="preserve">
+    <value>imgPlayerImage</value>
   </data>
   <data name="&gt;&gt;imgPlayerImage.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblCapitain.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;imgPlayerImage.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="imgFavourite.Location" type="System.Drawing.Point, System.Drawing">
-    <value>343, 365</value>
+  <data name="&gt;&gt;imgPlayerImage.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="lblShirtNumber.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Sitka Small, 12pt, style=Bold</value>
-  </data>
-  <data name="lblName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>hr</value>
-  </metadata>
   <metadata name="cmsAddFavourite.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="addToFavouriteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 22</value>
+  </data>
+  <data name="addToFavouriteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Favourite</value>
+  </data>
+  <data name="editPictureToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 22</value>
+  </data>
+  <data name="editPictureToolStripMenuItem.Text" xml:space="preserve">
+    <value>Select new picture</value>
+  </data>
+  <data name="cmsAddFavourite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 48</value>
+  </data>
+  <data name="&gt;&gt;cmsAddFavourite.Name" xml:space="preserve">
+    <value>cmsAddFavourite</value>
+  </data>
+  <data name="&gt;&gt;cmsAddFavourite.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>403, 418</value>
+  </data>
+  <data name="&gt;&gt;addToFavouriteToolStripMenuItem.Name" xml:space="preserve">
+    <value>addToFavouriteToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;addToFavouriteToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;editPictureToolStripMenuItem.Name" xml:space="preserve">
+    <value>editPictureToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;editPictureToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PlayerControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

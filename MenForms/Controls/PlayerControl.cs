@@ -9,18 +9,44 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Resources;
+using DAL;
+using System.Globalization;
 
 namespace MenForms.Controls
 {
     public partial class PlayerControl : UserControl
     {
-        private ResourceManager rm = new ResourceManager("MenForms.PlayerControl", typeof(PlayerControl).Assembly);
+        private ResourceManager rm = new ResourceManager("MenForms.Controls.PlayerControl", typeof(PlayerControl).Assembly);
 
         public PlayerControl()
         {
             InitializeComponent();
+            ChangeCulture(Utils.GetLanguageTagFromSettings(DataFactory.AppSettings));
+
+        }
+        private void ChangeCulture(string cultureName)
+        {
+            CultureInfo newCulture = new CultureInfo(cultureName);
+            Thread.CurrentThread.CurrentCulture = newCulture;
+            Thread.CurrentThread.CurrentUICulture = newCulture;
+
+            // Update text of controls
+            UpdateControlTexts();
+
+            // Invalidate the form to ensure it's redrawn with the updated text
+            Invalidate();
+            Refresh();
         }
 
+        private void UpdateControlTexts()
+        {
+            addToFavouriteToolStripMenuItem.Text= rm.GetString("addToFavouriteToolStripMenuItem.Text");
+            editPictureToolStripMenuItem.Text = rm.GetString("editPictureToolStripMenuItem.Text");
+            lblCapitain.Text = rm.GetString("lblCapitain.Text");
+            lblName.Text = rm.GetString("lblName.Text");
+            lblPosition.Text = rm.GetString("lblPosition.Text");
+            lblShirtNumber.Text = rm.GetString("lblShirtNumber.Text");
+        }
         private void addToFavouriteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SetParentOther(this);

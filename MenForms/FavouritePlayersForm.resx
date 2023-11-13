@@ -117,7 +117,211 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panelPlayers.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panelPlayers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 33</value>
+  </data>
+  <data name="panelPlayers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 1000</value>
+  </data>
+  <data name="panelPlayers.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelPlayers.Name" xml:space="preserve">
+    <value>panelPlayers</value>
+  </data>
+  <data name="&gt;&gt;panelPlayers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelPlayers.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelPlayers.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblPlayers.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPlayers.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Copperplate Gothic Bold, 14.25pt</value>
+  </data>
+  <data name="lblPlayers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 9</value>
+  </data>
+  <data name="lblPlayers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 21</value>
+  </data>
+  <data name="lblPlayers.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblPlayers.Text" xml:space="preserve">
+    <value>Players</value>
+  </data>
+  <data name="&gt;&gt;lblPlayers.Name" xml:space="preserve">
+    <value>lblPlayers</value>
+  </data>
+  <data name="&gt;&gt;lblPlayers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPlayers.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblPlayers.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblFavouritePlayers.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblFavouritePlayers.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Copperplate Gothic Bold, 14.25pt</value>
+  </data>
+  <data name="lblFavouritePlayers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>978, 9</value>
+  </data>
+  <data name="lblFavouritePlayers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 21</value>
+  </data>
+  <data name="lblFavouritePlayers.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblFavouritePlayers.Text" xml:space="preserve">
+    <value>Favourite Players</value>
+  </data>
+  <data name="&gt;&gt;lblFavouritePlayers.Name" xml:space="preserve">
+    <value>lblFavouritePlayers</value>
+  </data>
+  <data name="&gt;&gt;lblFavouritePlayers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblFavouritePlayers.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblFavouritePlayers.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panelFavouritePlayers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>734, 33</value>
+  </data>
+  <data name="panelFavouritePlayers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>700, 700</value>
+  </data>
+  <data name="panelFavouritePlayers.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panelFavouritePlayers.Name" xml:space="preserve">
+    <value>panelFavouritePlayers</value>
+  </data>
+  <data name="&gt;&gt;panelFavouritePlayers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelFavouritePlayers.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelFavouritePlayers.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnNext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>978, 749</value>
+  </data>
+  <data name="btnNext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 35</value>
+  </data>
+  <data name="btnNext.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnNext.Text" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="&gt;&gt;btnNext.Name" xml:space="preserve">
+    <value>btnNext</value>
+  </data>
+  <data name="&gt;&gt;btnNext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNext.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnNext.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblLoading.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblLoading.Location" type="System.Drawing.Point, System.Drawing">
+    <value>978, 819</value>
+  </data>
+  <data name="lblLoading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 15</value>
+  </data>
+  <data name="lblLoading.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblLoading.Text" xml:space="preserve">
+    <value>Loading</value>
+  </data>
+  <data name="&gt;&gt;lblLoading.Name" xml:space="preserve">
+    <value>lblLoading</value>
+  </data>
+  <data name="&gt;&gt;lblLoading.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLoading.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblLoading.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="cmsAddAll.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="cmsAddAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 26</value>
+  </data>
+  <data name="&gt;&gt;cmsAddAll.Name" xml:space="preserve">
+    <value>cmsAddAll</value>
+  </data>
+  <data name="&gt;&gt;cmsAddAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="addSelectionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 22</value>
+  </data>
+  <data name="addSelectionToolStripMenuItem.Text" xml:space="preserve">
+    <value>Add Selection</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>hr</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1484, 1061</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>FavouritePlayersForm</value>
+  </data>
+  <data name="&gt;&gt;addSelectionToolStripMenuItem.Name" xml:space="preserve">
+    <value>addSelectionToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;addSelectionToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FavouritePlayersForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

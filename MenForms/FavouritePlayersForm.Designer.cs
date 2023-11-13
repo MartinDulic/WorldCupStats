@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FavouritePlayersForm));
             panelPlayers = new FlowLayoutPanel();
             lblPlayers = new Label();
             lblFavouritePlayers = new Label();
@@ -43,80 +44,56 @@
             // panelPlayers
             // 
             panelPlayers.AllowDrop = true;
-            panelPlayers.AutoScroll = true;
-            panelPlayers.Location = new Point(7, 33);
+            resources.ApplyResources(panelPlayers, "panelPlayers");
             panelPlayers.Name = "panelPlayers";
-            panelPlayers.Size = new Size(700, 1000);
-            panelPlayers.TabIndex = 0;
             panelPlayers.DragDrop += panelPlayers_DragDrop;
             // 
             // lblPlayers
             // 
-            lblPlayers.AutoSize = true;
-            lblPlayers.Font = new Font("Copperplate Gothic Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPlayers.Location = new Point(303, 9);
+            resources.ApplyResources(lblPlayers, "lblPlayers");
             lblPlayers.Name = "lblPlayers";
-            lblPlayers.Size = new Size(97, 21);
-            lblPlayers.TabIndex = 1;
-            lblPlayers.Text = "Players";
             // 
             // lblFavouritePlayers
             // 
-            lblFavouritePlayers.AutoSize = true;
-            lblFavouritePlayers.Font = new Font("Copperplate Gothic Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblFavouritePlayers.Location = new Point(978, 9);
+            resources.ApplyResources(lblFavouritePlayers, "lblFavouritePlayers");
             lblFavouritePlayers.Name = "lblFavouritePlayers";
-            lblFavouritePlayers.Size = new Size(210, 21);
-            lblFavouritePlayers.TabIndex = 3;
-            lblFavouritePlayers.Text = "Favourite Players";
             // 
             // panelFavouritePlayers
             // 
             panelFavouritePlayers.AllowDrop = true;
-            panelFavouritePlayers.Location = new Point(734, 33);
+            resources.ApplyResources(panelFavouritePlayers, "panelFavouritePlayers");
             panelFavouritePlayers.Name = "panelFavouritePlayers";
-            panelFavouritePlayers.Size = new Size(700, 700);
-            panelFavouritePlayers.TabIndex = 2;
             panelFavouritePlayers.DragDrop += panelFavouritePlayers_DragDrop;
             panelFavouritePlayers.DragEnter += panelFavouritePlayers_DragEnter;
             // 
             // btnNext
             // 
-            btnNext.Location = new Point(978, 749);
+            resources.ApplyResources(btnNext, "btnNext");
             btnNext.Name = "btnNext";
-            btnNext.Size = new Size(210, 35);
-            btnNext.TabIndex = 4;
-            btnNext.Text = "Next";
             btnNext.UseVisualStyleBackColor = true;
             btnNext.Click += btnNext_Click;
             // 
             // lblLoading
             // 
-            lblLoading.AutoSize = true;
-            lblLoading.Location = new Point(978, 819);
+            resources.ApplyResources(lblLoading, "lblLoading");
             lblLoading.Name = "lblLoading";
-            lblLoading.Size = new Size(50, 15);
-            lblLoading.TabIndex = 5;
-            lblLoading.Text = "Loading";
             // 
             // cmsAddAll
             // 
             cmsAddAll.Items.AddRange(new ToolStripItem[] { addSelectionToolStripMenuItem });
             cmsAddAll.Name = "cmsAddAll";
-            cmsAddAll.Size = new Size(148, 26);
+            resources.ApplyResources(cmsAddAll, "cmsAddAll");
             // 
             // addSelectionToolStripMenuItem
             // 
             addSelectionToolStripMenuItem.Name = "addSelectionToolStripMenuItem";
-            addSelectionToolStripMenuItem.Size = new Size(147, 22);
-            addSelectionToolStripMenuItem.Text = "Add Selection";
+            resources.ApplyResources(addSelectionToolStripMenuItem, "addSelectionToolStripMenuItem");
             addSelectionToolStripMenuItem.Click += addSelectionToolStripMenuItem_Click;
             // 
             // FavouritePlayersForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1484, 1061);
             Controls.Add(lblLoading);
             Controls.Add(btnNext);
             Controls.Add(lblFavouritePlayers);
@@ -124,8 +101,6 @@
             Controls.Add(lblPlayers);
             Controls.Add(panelPlayers);
             Name = "FavouritePlayersForm";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "FavouritePlayersForm";
             FormClosing += FavouritePlayersForm_FormClosing;
             Load += FavouritePlayersForm_Load;
             MouseClick += FavouritePlayersForm_MouseClick;

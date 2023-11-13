@@ -69,6 +69,17 @@ namespace DAL
             return settings;
         }
 
+        public static string GetLanguageTagFromSettings(AppSettings settings)
+        {
+            if (settings.Language == Model.Enums.Language.CROATIAN)
+            {
+                return "hr-HR";
+            }else
+            {
+                return "en-US";
+            }
+        }
+
         public static void KillProccess(string processName)
         {
 
