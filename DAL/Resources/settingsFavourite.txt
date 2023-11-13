@@ -1,2 +1,2 @@
-favouriteTeam:Korea Republic
+favouriteTeam:Argentina
 favouritePlayers:

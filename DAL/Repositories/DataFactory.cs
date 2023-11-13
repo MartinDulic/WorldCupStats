@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace DAL.Repositories
@@ -44,6 +45,7 @@ namespace DAL.Repositories
                 return events;
             }
         }
+
 
         private static IDictionary<string, PlayerRankingData> GetPlayerGoalAndYellowCardData()
         {
@@ -91,13 +93,17 @@ namespace DAL.Repositories
             return playersData;
         }
 
+        public static ISet<MatchData> MatchDataForSelectedCountry
+        {
+            get => dataRepository.GetManMatchDataByCountry(favouriteSettingsRepository.GetSettings().FavouriteTeam.FifaCode);
+        }
         public static IDictionary<string, PlayerRankingData> PlayerDataForSelectedCountry {
             get
             {
                 IDictionary<string, PlayerRankingData> allPlayersData = GetAllPlayerRankingData();
                 IDictionary<string, PlayerRankingData> nededPlayersData = new Dictionary<string, PlayerRankingData>();
                 string choosenTeamName = favouriteSettingsRepository.GetSettings().FavouriteTeam.CountryName;
-                IList<string> countryTeamPlayerNames = new List<string>();
+                ISet<string> countryTeamPlayerNames = new HashSet<string>();
 
                 foreach ( var match in Matches)
                 {
@@ -126,6 +132,7 @@ namespace DAL.Repositories
                     }
                 }
 
+                
                 foreach ( var playerName in countryTeamPlayerNames ) {
 
                     PlayerRankingData data;
@@ -135,9 +142,11 @@ namespace DAL.Repositories
                         {
                             nededPlayersData.Add(playerName, data);
                         }
+
                     }
 
                 }
+
                 return nededPlayersData;
             }
         }

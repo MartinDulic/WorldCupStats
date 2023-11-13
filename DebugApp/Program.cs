@@ -17,20 +17,7 @@ internal class Program
     private static void Main()
     {
 
-		try
-		{
-            DataFactory.FavouriteSettings.FavouritePlayers.ToList().ForEach(player =>
-            {
-                Console.WriteLine("player:" + player.ToString());
-            });
-
-        }
-        catch (Exception)
-		{
-
-            throw;
-			
-		}
+        var data = DataFactory.PlayerDataForSelectedCountry;
 
     }
 }

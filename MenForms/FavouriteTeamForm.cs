@@ -42,7 +42,9 @@ namespace MenForms
 
         private void FavouriteTeamForm_Load(object sender, EventArgs e)
         {
-            cbTeams.DataSource = dataRepository.GetAllMenCountryTeamData().ToList();
+            
+            cbTeams.DataSource = 
+                dataRepository.GetAllMenCountryTeamData().ToList().OrderBy(team => team.CountryName).ToList();
         }
 
         private void FavouriteTeamForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -54,7 +56,8 @@ namespace MenForms
         private void brnNext_Click(object sender, EventArgs e)
         {
             var selectedTeam =
-                dataRepository.GetAllMenCountryTeamData().ToList().ElementAt(cbTeams.SelectedIndex);
+                dataRepository.GetAllMenCountryTeamData().ToList().OrderBy(team => team.CountryName).
+                ToList().ElementAt(cbTeams.SelectedIndex);
             var favouriteSettings = favouriteSettingsRepo.GetSettings();
             favouriteSettings.FavouriteTeam = selectedTeam;
             favouriteSettingsRepo.UpdateSettings(favouriteSettings);

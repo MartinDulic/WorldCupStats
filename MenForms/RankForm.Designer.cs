@@ -89,14 +89,14 @@
             flpAttendance.AutoScroll = true;
             flpAttendance.Location = new Point(738, 62);
             flpAttendance.Name = "flpAttendance";
-            flpAttendance.Size = new Size(350, 431);
+            flpAttendance.Size = new Size(483, 431);
             flpAttendance.TabIndex = 6;
             // 
             // lblVenuesByAttendance
             // 
             lblVenuesByAttendance.AutoSize = true;
             lblVenuesByAttendance.Font = new Font("Sitka Banner", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblVenuesByAttendance.Location = new Point(871, 36);
+            lblVenuesByAttendance.Location = new Point(921, 36);
             lblVenuesByAttendance.Name = "lblVenuesByAttendance";
             lblVenuesByAttendance.Size = new Size(82, 23);
             lblVenuesByAttendance.TabIndex = 5;
@@ -115,7 +115,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1104, 627);
+            ClientSize = new Size(1233, 627);
             Controls.Add(lblLoading);
             Controls.Add(flpAttendance);
             Controls.Add(lblVenuesByAttendance);

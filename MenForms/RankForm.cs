@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,26 +37,46 @@ namespace MenForms
 
             Control[] controlsByGoals = new Control[0];
             Control[] controlsByYellowCards = new Control[0];
+            Control[] controlsByAttendance = new Control[0];
             var worker = new BackgroundWorker();
             worker.WorkerReportsProgress = true;
             worker.DoWork += (sender, e) =>
             {
-                e.Result = CreatePlayerControlsOrderByGoals();
+                controlsByGoals = CreatePlayerControlsOrderByGoals();
+                controlsByYellowCards = CreatePlayerControlsOrderByYellowCards();
+                controlsByAttendance = CreateMatchControlsOrderByAttendanceForSelectedCountry();
             };
 
             worker.RunWorkerCompleted += (sender, e) =>
             {
-                Control[] controlsByGoals = (Control[])e.Result;
                 flpGoalsScored.Controls.AddRange(controlsByGoals);
-
-                Control[] controlsByYellowCards = CreatePlayerControlsOrderByYellowCards();
                 flpYellowCards.Controls.AddRange(controlsByYellowCards);
+                flpAttendance.Controls.AddRange(controlsByAttendance);
 
                 blinkTimer.Stop();
                 lblLoading.Visible = false;
             };
 
             worker.RunWorkerAsync();
+        }
+
+        private Control[] CreateMatchControlsOrderByAttendanceForSelectedCountry()
+        {
+            ISet<MatchControl> matchControls = new HashSet<MatchControl>();
+            ISet<MatchData> matchData = DataFactory.MatchDataForSelectedCountry;
+            var sortedMatchData = matchData.OrderByDescending(match => match.Attendance).ToHashSet();
+
+            foreach (var match in sortedMatchData)
+            {
+
+                MatchControl matchControl = new MatchControl();
+                matchControl.HomeCountry = match.HomeTeamCountry;
+                matchControl.AwayCountry = match.AwayTeamCountry;
+                matchControl.Venue = match.Venue;
+                matchControl.Attendance = int.Parse(match.Attendance);
+                matchControls.Add(matchControl);
+            }
+            return matchControls.ToArray();
         }
 
         private static Control[] CreatePlayerControlsOrderByGoals()
