@@ -12,18 +12,19 @@ using DAL.Repositories;
 using DAL;
 using System.Globalization;
 
-namespace MenForms.Controls
+namespace MenForms
 {
-    public partial class MatchControl : UserControl
+    public partial class ClosingConfirmationForm : Form
     {
-        private ResourceManager rm = new ResourceManager("MenForms.Controls.PlayerRankControl", typeof(PlayerRankControl).Assembly);
-
-        public MatchControl()
+        private ResourceManager rm = new ResourceManager("MenForms.FavouriteTeamForm", typeof(FavouriteTeamForm).Assembly);
+        FormClosingEventArgs args;
+        public ClosingConfirmationForm(FormClosingEventArgs e)
         {
             InitializeComponent();
+            args = e;
             ChangeCulture(Utils.GetLanguageTagFromSettings(DataFactory.AppSettings));
         }
-        private void ChangeCulture(string cultureName)
+        public void ChangeCulture(string cultureName)
         {
             CultureInfo newCulture = new CultureInfo(cultureName);
             Thread.CurrentThread.CurrentCulture = newCulture;
@@ -39,9 +40,21 @@ namespace MenForms.Controls
 
         private void UpdateControlTexts()
         {
-            //lblAttendance.Text = rm.GetString("lblAttendance.Text");
-            //lblVenue.Text = rm.GetString("lblVenue.Text");
-            //lblVs.Text = rm.GetString("lblVs.Text");
+            //btnNo.Text = rm.GetString("btnNo.Text");
+            //btnYes.Text = rm.GetString("btnYes.Text");
+            //lblQuesion.Text = rm.GetString("lblQuesion.Text");
+
+        }
+
+        private void btnYes_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnNo_Click(object sender, EventArgs e)
+        {
+            args.Cancel = true;
+            Close();
         }
     }
 }

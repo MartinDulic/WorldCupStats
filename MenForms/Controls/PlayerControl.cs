@@ -40,7 +40,7 @@ namespace MenForms.Controls
 
         private void UpdateControlTexts()
         {
-            addToFavouriteToolStripMenuItem.Text= rm.GetString("addToFavouriteToolStripMenuItem.Text");
+            addToFavouriteToolStripMenuItem.Text = rm.GetString("addToFavouriteToolStripMenuItem.Text");
             editPictureToolStripMenuItem.Text = rm.GetString("editPictureToolStripMenuItem.Text");
             lblCapitain.Text = rm.GetString("lblCapitain.Text");
             lblName.Text = rm.GetString("lblName.Text");

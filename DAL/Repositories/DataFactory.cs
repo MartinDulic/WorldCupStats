@@ -1,4 +1,5 @@
 ﻿using DAL.Model;
+using DAL.Model.Enums;
 using DAL.Settings;
 using System;
 using System.Collections.Generic;
@@ -20,11 +21,31 @@ namespace DAL.Repositories
         private static IFavouriteSettingsRepository favouriteSettingsRepository = 
             RepositoryFactory.GetFavouriteSettingsRepository();
         private static IPlayerPictureRepository pictureRepository = RepositoryFactory.GetPlayerPictureRepository();
-        public static ISet<CountryTeam> CountryTeams { get => dataRepository.GetAllMenCountryTeamData(); } 
-        public static ISet<MatchData> Matches { get => dataRepository.GetAllManMatchData(); } 
         public static ISet<TeamStatistics> Statistics { get => GetStatistics(); }
         public static ISet<TeamEvent> TeamEvents { get => GetTeamEvents(); }
-
+        public static ISet<CountryTeam> CountryTeams { 
+            get { 
+                if (AppSettings.SelectedChampionship == SelectedChampionship.MEN)
+                {
+                    return dataRepository.GetAllMenCountryTeamData(); 
+                } else
+                {
+                    return dataRepository.GetAllWomenCountryTeamData();
+                } 
+            } 
+        }
+        public static ISet<MatchData> Matches {
+            get
+            {
+                if (AppSettings.SelectedChampionship == SelectedChampionship.MEN)
+                {
+                    return dataRepository.GetAllManMatchData();
+                } else
+                {
+                    return dataRepository.GetAllWomanMatchData();
+                }
+            }
+        }
         public static ISet<Player>? Players { get => ParsePlayers(); }
         public static ISet<Player> FavouritePlayers { get => 
                 favouriteSettingsRepository.GetSettings().FavouritePlayers.ToHashSet();
@@ -95,7 +116,19 @@ namespace DAL.Repositories
 
         public static ISet<MatchData> MatchDataForSelectedCountry
         {
-            get => dataRepository.GetManMatchDataByCountry(favouriteSettingsRepository.GetSettings().FavouriteTeam.FifaCode);
+            get
+            {
+                if (AppSettings.SelectedChampionship == SelectedChampionship.MEN)
+                {
+                    return dataRepository.GetManMatchDataByCountry(
+                        favouriteSettingsRepository.GetSettings().FavouriteTeam.FifaCode);
+                } else
+                {
+                    return dataRepository.GetWomanMatchDataByCountry(
+                        favouriteSettingsRepository.GetSettings().FavouriteTeam.FifaCode);
+                }
+
+            }
         }
         public static IDictionary<string, PlayerRankingData> PlayerDataForSelectedCountry {
             get

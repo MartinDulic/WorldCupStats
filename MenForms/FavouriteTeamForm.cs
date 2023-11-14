@@ -14,15 +14,16 @@ using System.Diagnostics;
 using DAL.Model.Enums;
 using DAL;
 using System.Globalization;
+using System.Diagnostics.Eventing.Reader;
 
 namespace MenForms
 {
-    public partial class FavouriteTeamForm : Form
+    public partial class FavouriteTeamForm : Form, IResponsive
     {
-        private readonly ISettingsRepository appSettingsRepo = RepositoryFactory.GetSettingsRepository();
         private readonly IFavouriteSettingsRepository favouriteSettingsRepo = RepositoryFactory.GetFavouriteSettingsRepository();
         private readonly IDataRepository dataRepository = RepositoryFactory.GetDataRepository();
         private ResourceManager rm = new ResourceManager("MenForms.FavouriteTeamForm", typeof(FavouriteTeamForm).Assembly);
+        private bool confirmOnClose = true;
 
         public FavouriteTeamForm()
         {
@@ -30,7 +31,7 @@ namespace MenForms
             ChangeCulture(Utils.GetLanguageTagFromSettings(DataFactory.AppSettings));
 
         }
-        private void ChangeCulture(string cultureName)
+        public void ChangeCulture(string cultureName)
         {
             CultureInfo newCulture = new CultureInfo(cultureName);
             Thread.CurrentThread.CurrentCulture = newCulture;
@@ -56,14 +57,27 @@ namespace MenForms
 
         private void FavouriteTeamForm_Load(object sender, EventArgs e)
         {
-            
-            cbTeams.DataSource = 
-                dataRepository.GetAllMenCountryTeamData().ToList().OrderBy(team => team.CountryName).ToList();
+            if (DataFactory.AppSettings.SelectedChampionship == SelectedChampionship.MEN)
+            {
+                cbTeams.DataSource =
+                    dataRepository.GetAllMenCountryTeamData().ToList().OrderBy(team => team.CountryName).ToList();
+            }
+            else
+            {
+                cbTeams.DataSource =
+                    dataRepository.GetAllWomenCountryTeamData().ToList().OrderBy(team => team.CountryName).ToList();
+            }
+
         }
 
         private void FavouriteTeamForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Dispose();
+            if (confirmOnClose)
+            {
+                var dialog = new ClosingConfirmationForm(e);
+                dialog.ShowDialog();
+
+            }
             Utils.KillProccess(Utils.PROCCES_NAME);
         }
 
@@ -79,10 +93,29 @@ namespace MenForms
             var form = new FavouritePlayersForm();
             form.Show();
 
+            confirmOnClose = false;
             Close();
-            Dispose();
-            Utils.KillProccess(Utils.PROCCES_NAME);
 
+        }
+
+        private void postavkeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new SettingsForm(this);
+            form.ShowDialog();
+        }
+
+        private void FavouriteTeamForm_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                cms.Show(this, e.Location);
+            }
+        }
+
+        public void ApplyChanges()
+        {
+            ChangeCulture(Utils.GetLanguageTagFromSettings(DataFactory.AppSettings));
+            FavouriteTeamForm_Load(this, new EventArgs());
         }
     }
 }

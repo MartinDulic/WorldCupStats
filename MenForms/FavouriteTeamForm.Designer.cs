@@ -28,16 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FavouriteTeamForm));
             cbTeams = new ComboBox();
             lblChooseTeam = new Label();
             brnNext = new Button();
+            cms = new ContextMenuStrip(components);
+            postavkeToolStripMenuItem = new ToolStripMenuItem();
+            cms.SuspendLayout();
             SuspendLayout();
             // 
             // cbTeams
             // 
-            resources.ApplyResources(cbTeams, "cbTeams");
             cbTeams.FormattingEnabled = true;
+            resources.ApplyResources(cbTeams, "cbTeams");
             cbTeams.Name = "cbTeams";
             // 
             // lblChooseTeam
@@ -53,6 +57,18 @@
             brnNext.UseVisualStyleBackColor = true;
             brnNext.Click += brnNext_Click;
             // 
+            // cms
+            // 
+            cms.Items.AddRange(new ToolStripItem[] { postavkeToolStripMenuItem });
+            cms.Name = "cms";
+            resources.ApplyResources(cms, "cms");
+            // 
+            // postavkeToolStripMenuItem
+            // 
+            postavkeToolStripMenuItem.Name = "postavkeToolStripMenuItem";
+            resources.ApplyResources(postavkeToolStripMenuItem, "postavkeToolStripMenuItem");
+            postavkeToolStripMenuItem.Click += postavkeToolStripMenuItem_Click;
+            // 
             // FavouriteTeamForm
             // 
             resources.ApplyResources(this, "$this");
@@ -63,6 +79,8 @@
             Name = "FavouriteTeamForm";
             FormClosing += FavouriteTeamForm_FormClosing;
             Load += FavouriteTeamForm_Load;
+            MouseClick += FavouriteTeamForm_MouseClick;
+            cms.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -72,5 +90,7 @@
         private ComboBox cbTeams;
         private Label lblChooseTeam;
         private Button brnNext;
+        private ContextMenuStrip cms;
+        private ToolStripMenuItem postavkeToolStripMenuItem;
     }
 }

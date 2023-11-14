@@ -102,20 +102,20 @@
             // 
             // cmsAddFavourite
             // 
+            resources.ApplyResources(cmsAddFavourite, "cmsAddFavourite");
             cmsAddFavourite.Items.AddRange(new ToolStripItem[] { addToFavouriteToolStripMenuItem, editPictureToolStripMenuItem });
             cmsAddFavourite.Name = "cmsAddFavourite";
-            resources.ApplyResources(cmsAddFavourite, "cmsAddFavourite");
             // 
             // addToFavouriteToolStripMenuItem
             // 
-            addToFavouriteToolStripMenuItem.Name = "addToFavouriteToolStripMenuItem";
             resources.ApplyResources(addToFavouriteToolStripMenuItem, "addToFavouriteToolStripMenuItem");
+            addToFavouriteToolStripMenuItem.Name = "addToFavouriteToolStripMenuItem";
             addToFavouriteToolStripMenuItem.Click += addToFavouriteToolStripMenuItem_Click;
             // 
             // editPictureToolStripMenuItem
             // 
-            editPictureToolStripMenuItem.Name = "editPictureToolStripMenuItem";
             resources.ApplyResources(editPictureToolStripMenuItem, "editPictureToolStripMenuItem");
+            editPictureToolStripMenuItem.Name = "editPictureToolStripMenuItem";
             editPictureToolStripMenuItem.Click += editPictureToolStripMenuItem_Click;
             // 
             // PlayerControl

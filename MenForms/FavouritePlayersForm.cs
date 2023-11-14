@@ -16,10 +16,10 @@ using System.Resources;
 
 namespace MenForms
 {
-    public partial class FavouritePlayersForm : Form
+    public partial class FavouritePlayersForm : Form, IResponsive
     {
         private ResourceManager rm = new ResourceManager("MenForms.FavouritePlayersForm", typeof(FavouritePlayersForm).Assembly);
-
+        bool confirmOnClose = true;
         public FavouritePlayersForm()
         {
 
@@ -27,7 +27,7 @@ namespace MenForms
             ChangeCulture(Utils.GetLanguageTagFromSettings(DataFactory.AppSettings));
 
         }
-        private void ChangeCulture(string cultureName)
+        public void ChangeCulture(string cultureName)
         {
             CultureInfo newCulture = new CultureInfo(cultureName);
             Thread.CurrentThread.CurrentCulture = newCulture;
@@ -50,7 +50,10 @@ namespace MenForms
         }
         private void FavouritePlayersForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Dispose();
+            if (confirmOnClose){
+                var dialog = new ClosingConfirmationForm(e);
+                dialog.ShowDialog();
+            }
             Utils.KillProccess(Utils.PROCCES_NAME);
         }
         private void BlinkTimer_Tick(object sender, EventArgs e)
@@ -67,12 +70,14 @@ namespace MenForms
             blinkTimer.Tick += BlinkTimer_Tick;
             blinkTimer.Start();
 
+            panelPlayers.Controls.Clear();
             Control[] controls = new Control[0];
             var worker = new BackgroundWorker();
             worker.WorkerReportsProgress = true;
             worker.DoWork += (sender, e) =>
             {
                 controls = CreatePlayerControls();
+                panelFavouritePlayers.Controls.Clear();
             };
 
             worker.RunWorkerCompleted += (sender, e) =>
@@ -280,9 +285,21 @@ namespace MenForms
             var form = new RankForm();
             form.Show();
 
+            confirmOnClose = false;
             Close();
-            Dispose();
 
+        }
+
+        public void ApplyChanges()
+        {
+            ChangeCulture(Utils.GetLanguageTagFromSettings(DataFactory.AppSettings));
+            FavouritePlayersForm_Load(this, new EventArgs());
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new SettingsForm(this);
+            form.ShowDialog();
         }
     }
 }

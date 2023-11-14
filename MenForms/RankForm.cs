@@ -19,11 +19,12 @@ using Microsoft.VisualBasic;
 
 namespace MenForms
 {
-    public partial class RankForm : Form
+    public partial class RankForm : Form, IResponsive
     {
-        private ResourceManager rm = new ResourceManager("MenForms.FavouritePlayersForm", typeof(FavouritePlayersForm).Assembly);
+        private ResourceManager rm = new ResourceManager("MenForms.RankForm", typeof(RankForm).Assembly);
         private System.Drawing.Printing.PrintDocument pdPrintRankings = new System.Drawing.Printing.PrintDocument();
         private int cntr = 1;
+        bool confirmOnClose = true;
         public RankForm()
         {
             InitializeComponent();
@@ -57,7 +58,7 @@ namespace MenForms
         }
         private void BlinkTimer_Tick(object sender, EventArgs e)
         {
-            
+
             // Toggle visibility of the label
             lblLoading.Visible = false;
             Thread.Sleep(500);
@@ -70,6 +71,9 @@ namespace MenForms
             blinkTimer.Tick += BlinkTimer_Tick;
             blinkTimer.Start();
 
+            flpGoalsScored.Controls.Clear();
+            flpYellowCards.Controls.Clear();
+            flpAttendance.Controls.Clear();
             Control[] controlsByGoals = new Control[0];
             Control[] controlsByYellowCards = new Control[0];
             Control[] controlsByAttendance = new Control[0];
@@ -202,7 +206,8 @@ namespace MenForms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-
+            confirmOnClose = false;
+            Close();
         }
 
         private void printPDFToolStripMenuItem_Click(object sender, EventArgs e)
@@ -220,7 +225,7 @@ namespace MenForms
         {
 
             StringBuilder sbPrint = new StringBuilder();
-            if (cntr==1)
+            if (cntr == 1)
             {
                 sbPrint.Append("Players by goals scored :");
                 sbPrint.Append("\n");
@@ -232,7 +237,8 @@ namespace MenForms
                 sbPrint.Append("\n\n\n\n");
                 cntr++;
                 e.HasMorePages = true;
-            } else
+            }
+            else
             {
                 sbPrint.Clear();
                 sbPrint.Append("Matches by attendance : ");
@@ -242,7 +248,7 @@ namespace MenForms
                 e.HasMorePages = false;
             }
 
-           
+
             string content = sbPrint.ToString();
             Font font = new Font("Arial", 11);
             Brush brush = Brushes.Black;
@@ -258,7 +264,7 @@ namespace MenForms
             ISet<MatchData> matchData = DataFactory.MatchDataForSelectedCountry;
             var sortedMatchData = matchData.OrderByDescending(match => match.Attendance).ToHashSet();
             var sb = new StringBuilder();
-            foreach(var match in sortedMatchData)
+            foreach (var match in sortedMatchData)
             {
                 sb.Append(match.HomeTeam.Country);
                 sb.Append(" Vs ");
@@ -301,7 +307,7 @@ namespace MenForms
             var sortedPlayersData = playersData.OrderByDescending(kvp => kvp.Value.Goals)
                                            .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
             var sb = new StringBuilder();
-            foreach ( var kvp in sortedPlayersData )
+            foreach (var kvp in sortedPlayersData)
             {
                 sb.Append("Name : ");
                 sb.Append(kvp.Key);
@@ -320,8 +326,30 @@ namespace MenForms
         {
             if (e.Button == MouseButtons.Right)
             {
-                cmsPrint.Show(this,e.Location);
+                cmsPrint.Show(this, e.Location);
             }
+        }
+
+        public void ApplyChanges()
+        {
+            ChangeCulture(Utils.GetLanguageTagFromSettings(DataFactory.AppSettings));
+            RankForm_Load(this, new EventArgs());
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new SettingsForm(this);
+            form.ShowDialog();
+        }
+
+        private void RankForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (confirmOnClose)
+            {
+                var dialog = new ClosingConfirmationForm(e);
+                dialog.ShowDialog();
+            }
+            Utils.KillProccess(Utils.PROCCES_NAME);
         }
     }
 }

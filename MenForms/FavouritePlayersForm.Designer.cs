@@ -38,13 +38,14 @@
             lblLoading = new Label();
             cmsAddAll = new ContextMenuStrip(components);
             addSelectionToolStripMenuItem = new ToolStripMenuItem();
+            settingsToolStripMenuItem = new ToolStripMenuItem();
             cmsAddAll.SuspendLayout();
             SuspendLayout();
             // 
             // panelPlayers
             // 
-            panelPlayers.AllowDrop = true;
             resources.ApplyResources(panelPlayers, "panelPlayers");
+            panelPlayers.AllowDrop = true;
             panelPlayers.Name = "panelPlayers";
             panelPlayers.DragDrop += panelPlayers_DragDrop;
             // 
@@ -60,8 +61,8 @@
             // 
             // panelFavouritePlayers
             // 
-            panelFavouritePlayers.AllowDrop = true;
             resources.ApplyResources(panelFavouritePlayers, "panelFavouritePlayers");
+            panelFavouritePlayers.AllowDrop = true;
             panelFavouritePlayers.Name = "panelFavouritePlayers";
             panelFavouritePlayers.DragDrop += panelFavouritePlayers_DragDrop;
             panelFavouritePlayers.DragEnter += panelFavouritePlayers_DragEnter;
@@ -80,15 +81,21 @@
             // 
             // cmsAddAll
             // 
-            cmsAddAll.Items.AddRange(new ToolStripItem[] { addSelectionToolStripMenuItem });
-            cmsAddAll.Name = "cmsAddAll";
             resources.ApplyResources(cmsAddAll, "cmsAddAll");
+            cmsAddAll.Items.AddRange(new ToolStripItem[] { addSelectionToolStripMenuItem, settingsToolStripMenuItem });
+            cmsAddAll.Name = "cmsAddAll";
             // 
             // addSelectionToolStripMenuItem
             // 
-            addSelectionToolStripMenuItem.Name = "addSelectionToolStripMenuItem";
             resources.ApplyResources(addSelectionToolStripMenuItem, "addSelectionToolStripMenuItem");
+            addSelectionToolStripMenuItem.Name = "addSelectionToolStripMenuItem";
             addSelectionToolStripMenuItem.Click += addSelectionToolStripMenuItem_Click;
+            // 
+            // settingsToolStripMenuItem
+            // 
+            resources.ApplyResources(settingsToolStripMenuItem, "settingsToolStripMenuItem");
+            settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            settingsToolStripMenuItem.Click += settingsToolStripMenuItem_Click;
             // 
             // FavouritePlayersForm
             // 
@@ -120,6 +127,7 @@
         private List<Control> selectedControls = new List<Control>();
         private ContextMenuStrip cmsAddAll;
         private ToolStripMenuItem addSelectionToolStripMenuItem;
+        private ToolStripMenuItem settingsToolStripMenuItem;
 
         public IList<Control> SelectedControls
         {

@@ -118,37 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblPlayers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 21</value>
+  <data name="lblQuesion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>360, 23</value>
   </data>
-  <data name="lblPlayers.Text" xml:space="preserve">
-    <value>Igrači</value>
+  <data name="lblQuesion.Text" xml:space="preserve">
+    <value>Primijeni promijene?</value>
   </data>
-  <data name="lblFavouritePlayers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 21</value>
+  <data name="btnYes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>89, 55</value>
   </data>
-  <data name="lblFavouritePlayers.Text" xml:space="preserve">
-    <value>Omiljeni Igrači</value>
+  <data name="btnYes.Text" xml:space="preserve">
+    <value>Da</value>
   </data>
-  <data name="btnNext.Text" xml:space="preserve">
-    <value>Dalje</value>
+  <data name="btnNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 55</value>
   </data>
-  <data name="lblLoading.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 15</value>
+  <data name="btnNo.Text" xml:space="preserve">
+    <value>Ne</value>
   </data>
-  <data name="lblLoading.Text" xml:space="preserve">
-    <value>Učitavanje</value>
-  </data>
-  <data name="addSelectionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Postavke</value>
-  </data>
-  <data name="cmsAddAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 70</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>373, 90</value>
   </data>
 </root>

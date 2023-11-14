@@ -82,8 +82,6 @@ namespace DAL
 
         public static void KillProccess(string processName)
         {
-
-
             Process[] processes = Process.GetProcessesByName(processName);
 
             foreach (Process process in processes)

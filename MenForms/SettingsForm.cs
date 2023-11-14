@@ -7,15 +7,18 @@ using System.Resources;
 
 namespace MenForms
 {
-    public partial class StartingForm : Form
+    public partial class SettingsForm : Form
     {
         readonly ISettingsRepository settingsRepo = RepositoryFactory.GetSettingsRepository();
-        ResourceManager rm = new ResourceManager("MenForms.StartingForm", typeof(StartingForm).Assembly);
+        ResourceManager rm = new ResourceManager("MenForms.SettingsForm", typeof(SettingsForm).Assembly);
         AppSettings settings = new AppSettings();
-        bool confirmOnClose = true;
-        public StartingForm()
+        IResponsive parentForm;
+        public bool ApplyChanges { get; set; } = false;
+
+        public SettingsForm(IResponsive parent)
         {
             InitializeComponent();
+            parentForm = parent;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -67,6 +70,14 @@ namespace MenForms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            var dialog = new SettingsConfirmationForm(this);
+            dialog.ShowDialog();
+            if (!ApplyChanges)
+            {
+                Close();
+                return;
+            }
+
             if (rbMen.Checked)
             {
                 settings.SelectedChampionship = SelectedChampionship.MEN;
@@ -85,20 +96,14 @@ namespace MenForms
             }
 
             settingsRepo.UpdateSettings(settings);
+            parentForm.ApplyChanges();
 
-            var form = new FavouriteTeamForm();
-            form.Show();
-            confirmOnClose = false;
             Close();
+
         }
 
         private void StartingForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (confirmOnClose)
-            {
-                var dialog = new ClosingConfirmationForm(e);
-                dialog.ShowDialog();
-            }
             Utils.KillProccess(Utils.PROCCES_NAME);
         }
     }

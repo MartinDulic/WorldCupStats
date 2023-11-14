@@ -117,32 +117,50 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnNext.Text" xml:space="preserve">
-    <value>Dalje</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cmsPrint.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 48</value>
-  </data>
-  <data name="lblLoading.Text" xml:space="preserve">
-    <value>Učitavanje...</value>
+  <data name="lblPlayersGoalsScored.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 23</value>
   </data>
   <data name="lblPlayersGoalsScored.Text" xml:space="preserve">
     <value>Zabijenim golovima</value>
   </data>
+  <data name="lblRankingsBy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 23</value>
+  </data>
   <data name="lblRankingsBy.Text" xml:space="preserve">
     <value>Poredak po</value>
   </data>
-  <data name="lblVenuesByAttendance.Text" xml:space="preserve">
-    <value>Broj posjetitelja</value>
+  <data name="lblYellowCards.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
   </data>
   <data name="lblYellowCards.Text" xml:space="preserve">
     <value>Žutim kartonima</value>
   </data>
+  <data name="lblVenuesByAttendance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 23</value>
+  </data>
+  <data name="lblVenuesByAttendance.Text" xml:space="preserve">
+    <value>Broj posjetitelja</value>
+  </data>
+  <data name="lblLoading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 15</value>
+  </data>
+  <data name="lblLoading.Text" xml:space="preserve">
+    <value>Učitavanje...</value>
+  </data>
+  <data name="btnNext.Text" xml:space="preserve">
+    <value>Završi</value>
+  </data>
   <data name="printPDFToolStripMenuItem.Text" xml:space="preserve">
     <value>Printaj PDF</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value />
+  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Postavke</value>
+  </data>
+  <data name="cmsPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 70</value>
   </data>
 </root>

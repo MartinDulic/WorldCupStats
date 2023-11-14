@@ -31,16 +31,17 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RankForm));
             lblPlayersGoalsScored = new Label();
-            flpGoalsScored = new FlowLayoutPanel();
             lblRankingsBy = new Label();
-            flpYellowCards = new FlowLayoutPanel();
             lblYellowCards = new Label();
-            flpAttendance = new FlowLayoutPanel();
             lblVenuesByAttendance = new Label();
             lblLoading = new Label();
             btnNext = new Button();
             cmsPrint = new ContextMenuStrip(components);
             printPDFToolStripMenuItem = new ToolStripMenuItem();
+            settingsToolStripMenuItem = new ToolStripMenuItem();
+            flpYellowCards = new FlowLayoutPanel();
+            flpGoalsScored = new FlowLayoutPanel();
+            flpAttendance = new FlowLayoutPanel();
             cmsPrint.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,30 +50,15 @@
             resources.ApplyResources(lblPlayersGoalsScored, "lblPlayersGoalsScored");
             lblPlayersGoalsScored.Name = "lblPlayersGoalsScored";
             // 
-            // flpGoalsScored
-            // 
-            resources.ApplyResources(flpGoalsScored, "flpGoalsScored");
-            flpGoalsScored.Name = "flpGoalsScored";
-            // 
             // lblRankingsBy
             // 
             resources.ApplyResources(lblRankingsBy, "lblRankingsBy");
             lblRankingsBy.Name = "lblRankingsBy";
             // 
-            // flpYellowCards
-            // 
-            resources.ApplyResources(flpYellowCards, "flpYellowCards");
-            flpYellowCards.Name = "flpYellowCards";
-            // 
             // lblYellowCards
             // 
             resources.ApplyResources(lblYellowCards, "lblYellowCards");
             lblYellowCards.Name = "lblYellowCards";
-            // 
-            // flpAttendance
-            // 
-            resources.ApplyResources(flpAttendance, "flpAttendance");
-            flpAttendance.Name = "flpAttendance";
             // 
             // lblVenuesByAttendance
             // 
@@ -93,15 +79,36 @@
             // 
             // cmsPrint
             // 
-            resources.ApplyResources(cmsPrint, "cmsPrint");
-            cmsPrint.Items.AddRange(new ToolStripItem[] { printPDFToolStripMenuItem });
+            cmsPrint.Items.AddRange(new ToolStripItem[] { printPDFToolStripMenuItem, settingsToolStripMenuItem });
             cmsPrint.Name = "contextMenuStrip1";
+            resources.ApplyResources(cmsPrint, "cmsPrint");
             // 
             // printPDFToolStripMenuItem
             // 
-            resources.ApplyResources(printPDFToolStripMenuItem, "printPDFToolStripMenuItem");
             printPDFToolStripMenuItem.Name = "printPDFToolStripMenuItem";
+            resources.ApplyResources(printPDFToolStripMenuItem, "printPDFToolStripMenuItem");
             printPDFToolStripMenuItem.Click += printPDFToolStripMenuItem_Click;
+            // 
+            // settingsToolStripMenuItem
+            // 
+            settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            resources.ApplyResources(settingsToolStripMenuItem, "settingsToolStripMenuItem");
+            settingsToolStripMenuItem.Click += settingsToolStripMenuItem_Click;
+            // 
+            // flpYellowCards
+            // 
+            resources.ApplyResources(flpYellowCards, "flpYellowCards");
+            flpYellowCards.Name = "flpYellowCards";
+            // 
+            // flpGoalsScored
+            // 
+            resources.ApplyResources(flpGoalsScored, "flpGoalsScored");
+            flpGoalsScored.Name = "flpGoalsScored";
+            // 
+            // flpAttendance
+            // 
+            resources.ApplyResources(flpAttendance, "flpAttendance");
+            flpAttendance.Name = "flpAttendance";
             // 
             // RankForm
             // 
@@ -117,6 +124,7 @@
             Controls.Add(flpGoalsScored);
             Controls.Add(lblPlayersGoalsScored);
             Name = "RankForm";
+            FormClosing += RankForm_FormClosing;
             Load += RankForm_Load;
             MouseClick += RankForm_MouseClick;
             cmsPrint.ResumeLayout(false);
@@ -126,15 +134,16 @@
 
         #endregion
         private Label lblPlayersGoalsScored;
-        private FlowLayoutPanel flpGoalsScored;
         private Label lblRankingsBy;
-        private FlowLayoutPanel flpYellowCards;
         private Label lblYellowCards;
-        private FlowLayoutPanel flpAttendance;
         private Label lblVenuesByAttendance;
         private Label lblLoading;
         private Button btnNext;
         private ContextMenuStrip cmsPrint;
         private ToolStripMenuItem printPDFToolStripMenuItem;
+        private ToolStripMenuItem settingsToolStripMenuItem;
+        private FlowLayoutPanel flpYellowCards;
+        private FlowLayoutPanel flpGoalsScored;
+        private FlowLayoutPanel flpAttendance;
     }
 }
