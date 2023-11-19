@@ -1,2 +1,2 @@
-favouriteTeam:Argentina
-favouritePlayers:
+favouriteTeam:Croatia
+favouritePlayers:Marco ASENSIO,Wilder CARTAGENA

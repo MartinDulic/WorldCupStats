@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using DAL.Model.Enums;
+using DAL.Repositories.Interfaces;
 
 namespace DAL.Repositories
 {

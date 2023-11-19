@@ -1,5 +1,6 @@
 ﻿using DAL.Model;
 using DAL.Model.Enums;
+using DAL.Repositories.Interfaces;
 using DAL.Settings;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace DAL.Repositories
 
         public static string PLAYER_PICTURES_PATH = "..\\..\\..\\..\\DAL\\Resources\\Images\\icon";
         public static string PLAYER_PICTURES_EXTENSION = ".png";
+
         private static IDataRepository dataRepository = RepositoryFactory.GetDataRepository();
         private static ISettingsRepository settingsRepository = RepositoryFactory.GetSettingsRepository();
         private static IFavouriteSettingsRepository favouriteSettingsRepository = 
@@ -27,10 +29,10 @@ namespace DAL.Repositories
             get { 
                 if (AppSettings.SelectedChampionship == SelectedChampionship.MEN)
                 {
-                    return dataRepository.GetAllMenCountryTeamData(); 
+                    return dataRepository.GetAllMenCountryTeamData().OrderBy(ct => ct.CountryName).ToHashSet(); 
                 } else
                 {
-                    return dataRepository.GetAllWomenCountryTeamData();
+                    return dataRepository.GetAllWomenCountryTeamData().OrderBy(ct => ct.CountryName).ToHashSet();
                 } 
             } 
         }
@@ -130,6 +132,7 @@ namespace DAL.Repositories
 
             }
         }
+
         public static IDictionary<string, PlayerRankingData> PlayerDataForSelectedCountry {
             get
             {

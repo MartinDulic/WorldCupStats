@@ -1,0 +1,79 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF.View"
+        xmlns:ViewModel="clr-namespace:WPF.ViewModel" x:Class="WPF.View.NationalTeamView"
+        mc:Ignorable="d"
+        Title="NationalTeamView" Height="450" Width="800" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Closing="Window_Closing">
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem x:Name="mniSettings" Header="Settings" Click="mniSettings_Click"/>
+        </ContextMenu>
+    </Window.ContextMenu>
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock HorizontalAlignment="Center" Grid.Row="0" Text="{Binding Title}" FontSize="20"/>
+        <Grid Margin="0 20 0 0" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <ComboBox x:Name="cbCountries" MaxWidth="300" MaxHeight="24" Grid.Column="0" ItemsSource="{Binding Countries}" SelectedIndex="{Binding SelectedIndexCountry}" SelectionChanged="cbCountries_SelectionChanged"/>
+            <TextBlock Text="Vs" Grid.Column="1" HorizontalAlignment="Center"/>
+            <ComboBox x:Name="cbOpponents" MaxWidth="300" MaxHeight="24" Grid.Column="2" ItemsSource="{Binding Opponents}" SelectedIndex="0" SelectionChanged="cbOpponents_SelectionChanged"/>
+
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="0 20 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnCountryDetails" Grid.Column="0" MinHeight="20" MaxWidth="100" Click="btnCountryDetails_Click" Content="Details"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="{Binding Result}"/>
+            <Button x:Name="btnOpponentDetails" Grid.Column="2" MinHeight="20" MaxWidth="100" Click="btnOpponentDetails_Click" Content="Details"/>
+        </Grid>
+
+        <Grid Grid.Row="3" Margin="0 10 0 0">
+            <Grid.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="/View/Field.png"/>
+            </Grid.Background>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+
+            <WrapPanel  x:Name="spHomeGoalie" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <WrapPanel  x:Name="spHomeDefender" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <WrapPanel  x:Name="spHomeMidfield" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <WrapPanel  x:Name="spHomeForward" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <WrapPanel  x:Name="spGuestForward" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <WrapPanel  x:Name="spGuestMidfield" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <WrapPanel  x:Name="spGuestDefender" Grid.Column="6" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <WrapPanel  x:Name="spGuestGoalie" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+
+        </Grid>
+
+    </Grid>
+</Window>

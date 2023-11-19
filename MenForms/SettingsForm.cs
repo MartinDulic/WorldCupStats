@@ -1,6 +1,7 @@
 using DAL;
 using DAL.Model.Enums;
 using DAL.Repositories;
+using DAL.Repositories.Interfaces;
 using DAL.Settings;
 using System.Globalization;
 using System.Resources;

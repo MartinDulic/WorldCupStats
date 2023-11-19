@@ -1,3 +1,4 @@
 repository:file
 lang:croatian
 championship:men
+resolution:fullscreen

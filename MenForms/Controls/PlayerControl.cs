@@ -108,7 +108,15 @@ namespace MenForms.Controls
                 PlayerImagePictureBox = Image.FromFile(openFileDialog.FileName);
                 var pictureDict = DataFactory.PlayerPitcurePaths;
                 string playerName = lblPlayerName.Text;
-                pictureDict.Add(playerName, openFileDialog.FileName);
+                if (pictureDict.ContainsKey(playerName))
+                {
+
+                    pictureDict[playerName] = openFileDialog.FileName;
+                }
+                else
+                {
+                    pictureDict.Add(playerName, openFileDialog.FileName);
+                }
                 DataFactory.PlayerPitcurePaths = pictureDict;
 
             }

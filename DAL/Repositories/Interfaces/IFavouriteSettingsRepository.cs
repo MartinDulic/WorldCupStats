@@ -1,6 +1,6 @@
 ﻿using DAL.Settings;
 
-namespace DAL.Repositories
+namespace DAL.Repositories.Interfaces
 {
     public interface IFavouriteSettingsRepository
     {

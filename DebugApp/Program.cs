@@ -18,8 +18,7 @@ internal class Program
 {
     private static void Main()
     {
-
-
+        var data = DataFactory.AppSettings;
     }
 
 }

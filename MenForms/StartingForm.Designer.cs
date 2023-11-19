@@ -49,9 +49,9 @@
             // 
             // gbLanguage
             // 
-            resources.ApplyResources(gbLanguage, "gbLanguage");
             gbLanguage.Controls.Add(rbEng);
             gbLanguage.Controls.Add(rbCro);
+            resources.ApplyResources(gbLanguage, "gbLanguage");
             gbLanguage.Name = "gbLanguage";
             gbLanguage.TabStop = false;
             // 
@@ -89,9 +89,9 @@
             // 
             // gbChampionship
             // 
-            resources.ApplyResources(gbChampionship, "gbChampionship");
             gbChampionship.Controls.Add(rbWomen);
             gbChampionship.Controls.Add(rbMen);
+            resources.ApplyResources(gbChampionship, "gbChampionship");
             gbChampionship.Name = "gbChampionship";
             gbChampionship.TabStop = false;
             // 

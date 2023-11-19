@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="WPF.View.PlayerControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="200" Margin="{Binding Margins}">
+    <Button x:Name="btnControlButton" Background="{x:Null}" Click="btnControlButton_Click">
+        <Grid MinHeight="{Binding ControlDimension}" MinWidth="{Binding ControlDimension}" >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Source="{Binding PlayerImage}" MaxHeight="{Binding PictureDimension}" MaxWidth="{Binding PictureDimension}"/>
+    
+            <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding PlayerName}" FontSize="{Binding FontSize}" FontStyle="Italic" FontWeight="SemiBold" FontFamily="Arial Black"></TextBlock>
+
+        </Grid>
+    </Button>
+
+</UserControl>

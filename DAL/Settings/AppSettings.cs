@@ -14,6 +14,7 @@ namespace DAL.Settings
         public RepoType RepositoryType { get; set; }
         public Language Language { get; set; }
         public SelectedChampionship SelectedChampionship { get; set; }
+        public Resolution Resolution { get; set; }
         
 
     }

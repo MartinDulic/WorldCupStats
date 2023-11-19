@@ -1,4 +1,5 @@
 ﻿using DAL.Model;
+using DAL.Repositories.Interfaces;
 using DAL.Settings;
 using Newtonsoft.Json;
 using System;

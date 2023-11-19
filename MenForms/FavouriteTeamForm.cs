@@ -15,6 +15,7 @@ using DAL.Model.Enums;
 using DAL;
 using System.Globalization;
 using System.Diagnostics.Eventing.Reader;
+using DAL.Repositories.Interfaces;
 
 namespace MenForms
 {

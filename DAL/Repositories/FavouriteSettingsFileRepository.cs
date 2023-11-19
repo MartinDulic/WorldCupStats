@@ -1,4 +1,5 @@
 ﻿using DAL.Model;
+using DAL.Repositories.Interfaces;
 using DAL.Settings;
 using System;
 using System.Collections.Concurrent;

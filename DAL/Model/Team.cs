@@ -20,5 +20,9 @@ namespace DAL.Model
 
         [JsonProperty("penalties", NullValueHandling = NullValueHandling.Ignore)]
         public int? Penalties { get; set; }
+
+        public override string ToString() => $"{Country} ({Code})";
+
+
     }
 }

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.Repositories
+namespace DAL.Repositories.Interfaces
 {
     public interface IPlayerPictureRepository
     {
-        public IDictionary<string,string> GetAllPicturePaths();
-        public void SaveAllPictures(IDictionary<string,string> picturePaths);
+        public IDictionary<string, string> GetAllPicturePaths();
+        public void SaveAllPictures(IDictionary<string, string> picturePaths);
 
     }
 }

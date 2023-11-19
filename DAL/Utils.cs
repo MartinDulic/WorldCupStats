@@ -102,5 +102,38 @@ namespace DAL
             return values;
         }
 
+        public static string GetRelativePath(string basePath, string targetPath)
+        {
+            // Split the paths into individual components
+            string[] baseDirectories = basePath.Split('\\');
+            string[] targetDirectories = targetPath.Split('\\');
+
+            // Find the index where the paths diverge
+            int index = 0;
+            while (index < baseDirectories.Length && index < targetDirectories.Length &&
+                   baseDirectories[index] == targetDirectories[index])
+            {
+                index++;
+            }
+
+            // Build the relative path
+            string relativePath = "";
+            for (int i = index; i < baseDirectories.Length; i++)
+            {
+                relativePath += "..\\";
+            }
+
+            for (int i = index; i < targetDirectories.Length; i++)
+            {
+                relativePath += targetDirectories[i];
+                if (i < targetDirectories.Length - 1)
+                {
+                    relativePath += "\\";
+                }
+            }
+
+            return relativePath;
+        }
+
     }
 }
