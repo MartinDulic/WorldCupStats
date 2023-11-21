@@ -19,6 +19,7 @@ namespace WPF.ViewModel
 {
     internal class NationalTeamViewModel : ViewModelBase
     {
+        private ResourceManager rm;
         public NationalTeamViewModel()
         {
             ChangeCulture();
@@ -26,13 +27,13 @@ namespace WPF.ViewModel
 
         private void ChangeCulture()
         {
-            
+            string resourcePath;
             if (true)
             {
                 CultureInfo newCulture = new CultureInfo("hr-HR");
                 Thread.CurrentThread.CurrentCulture = newCulture;
                 Thread.CurrentThread.CurrentUICulture = newCulture;
-                
+                resourcePath = "WPF.Resources.NationalTeamViewModel";
             }
             else
             {
@@ -41,6 +42,7 @@ namespace WPF.ViewModel
                 Thread.CurrentThread.CurrentUICulture = newCulture;
                
             }
+            rm = new ResourceManager(resourcePath, Assembly.GetExecutingAssembly());
 
             FrameworkElement.LanguageProperty.OverrideMetadata(typeof(FrameworkElement),
                     new FrameworkPropertyMetadata(XmlLanguage.GetLanguage(CultureInfo.CurrentCulture.Name)));
@@ -68,7 +70,6 @@ namespace WPF.ViewModel
             }
         }
 
-        
         public int SelectedIndexCountry
         {
             get

@@ -5,10 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPF.View"
              mc:Ignorable="d" 
-             d:DesignHeight="200" d:DesignWidth="200" Margin="{Binding Margins}">
+             d:DesignHeight="200" d:DesignWidth="200" Margin="{Binding Margins}" Loaded="usc_Loaded">
     <Button x:Name="btnControlButton" Background="{x:Null}" Click="btnControlButton_Click">
         <Grid MinHeight="{Binding ControlDimension}" MinWidth="{Binding ControlDimension}" >
-
+            
+            
             <Grid.RowDefinitions>
                 <RowDefinition Height="10*"></RowDefinition>
                 <RowDefinition Height="1*"></RowDefinition>
@@ -20,5 +21,6 @@
 
         </Grid>
     </Button>
+
 
 </UserControl>

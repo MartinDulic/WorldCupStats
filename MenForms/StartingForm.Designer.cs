@@ -65,9 +65,7 @@
             // rbCro
             // 
             resources.ApplyResources(rbCro, "rbCro");
-            rbCro.Checked = true;
             rbCro.Name = "rbCro";
-            rbCro.TabStop = true;
             rbCro.UseVisualStyleBackColor = true;
             rbCro.CheckedChanged += radioButton1_CheckedChanged;
             // 
@@ -81,9 +79,7 @@
             // rbMen
             // 
             resources.ApplyResources(rbMen, "rbMen");
-            rbMen.Checked = true;
             rbMen.Name = "rbMen";
-            rbMen.TabStop = true;
             rbMen.UseVisualStyleBackColor = true;
             rbMen.CheckedChanged += rbMen_CheckedChanged;
             // 

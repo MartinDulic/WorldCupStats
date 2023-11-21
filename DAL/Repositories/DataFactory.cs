@@ -49,6 +49,23 @@ namespace DAL.Repositories
             }
         }
         public static ISet<Player>? Players { get => ParsePlayers(); }
+        public static ISet<Player>? PlayersForSelectedCountry 
+        {
+            get
+            {
+                var favTeamName = FavouriteSettings.FavouriteTeam.CountryName;
+                TeamStatistics stat;
+                try
+                {
+                    stat = Matches.First(m => m.HomeTeam.Country == favTeamName).HomeTeamStatistics;
+                }
+                finally
+                {
+                    stat = Matches.First(m => m.AwayTeam.Country == favTeamName).AwayTeamStatistics;
+                }
+                return stat.StartingEleven.Union(stat.Substitutes).ToHashSet();
+            }
+        }
         public static ISet<Player> FavouritePlayers { get => 
                 favouriteSettingsRepository.GetSettings().FavouritePlayers.ToHashSet();
             set

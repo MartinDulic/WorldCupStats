@@ -1,4 +1,4 @@
 repository:file
-lang:croatian
+lang:english
 championship:men
 resolution:fullscreen

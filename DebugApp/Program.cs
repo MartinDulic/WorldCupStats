@@ -18,7 +18,9 @@ internal class Program
 {
     private static void Main()
     {
-        var data = DataFactory.AppSettings;
+
+        var r = RepositoryFactory.GetDataRepository();
+        var data = r.GetAllManMatchData();
     }
 
 }

@@ -97,7 +97,7 @@ namespace MenForms
             try
             {
                 IList<PlayerControl> controls = new List<PlayerControl>();
-                foreach (var player in DataFactory.Players)
+                foreach (var player in DataFactory.PlayersForSelectedCountry)//Players for selected country
                 {
 
                     var control = new PlayerControl();

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPF.View"
         xmlns:ViewModel="clr-namespace:WPF.ViewModel" x:Class="WPF.View.NationalTeamView"
         mc:Ignorable="d"
-        Title="NationalTeamView" Height="450" Width="800" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Closing="Window_Closing">
+        Title="NationalTeamView" Height="450" Width="800" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Closing="Window_Closing" ContentRendered="Window_ContentRendered">
     <Window.ContextMenu>
         <ContextMenu>
             <MenuItem x:Name="mniSettings" Header="Settings" Click="mniSettings_Click"/>

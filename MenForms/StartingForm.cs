@@ -12,11 +12,25 @@ namespace MenForms
     {
         readonly ISettingsRepository settingsRepo = RepositoryFactory.GetSettingsRepository();
         ResourceManager rm = new ResourceManager("MenForms.StartingForm", typeof(StartingForm).Assembly);
-        AppSettings settings = new AppSettings();
+        AppSettings settings = DataFactory.AppSettings;
         bool confirmOnClose = true;
         public StartingForm()
         {
             InitializeComponent();
+            if (settings.Language == Language.CROATIAN)
+            {
+                rbCro.Checked = true;
+            } else
+            {
+                rbEng.Checked = true;
+            }
+            if (settings.SelectedChampionship == SelectedChampionship.MEN)
+            {
+                rbMen.Checked = true;
+            } else
+            {
+                rbWomen.Checked = true;
+            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

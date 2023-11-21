@@ -119,10 +119,10 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 370</value>
+    <value>12, 249</value>
   </data>
   <data name="btnNext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 42</value>
+    <value>200, 31</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnNext.TabIndex" type="System.Int32, mscorlib">
@@ -198,7 +198,7 @@
     <value>1</value>
   </data>
   <data name="gbLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 55</value>
+    <value>12, 12</value>
   </data>
   <data name="gbLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 100</value>
@@ -276,7 +276,7 @@
     <value>1</value>
   </data>
   <data name="gbChampionship.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 186</value>
+    <value>12, 143</value>
   </data>
   <data name="gbChampionship.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 100</value>
@@ -306,7 +306,7 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+    <value>232, 291</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>WCStats</value>

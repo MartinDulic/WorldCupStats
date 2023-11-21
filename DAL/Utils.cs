@@ -50,6 +50,51 @@ namespace DAL
             return JsonConvert.DeserializeObject<T>(json, SettingsJson.jsonSerializerSettings);
         }
 
+        public static async Task<T> GetJsonObjectFromUrlAsync<T>(string url)
+        {
+            Console.WriteLine("Utils: " + url);
+
+            using var httpClient = new HttpClient();
+
+            try
+            {
+                using var response = await httpClient.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+
+                using var content = response.Content;
+                var json = await content.ReadAsStringAsync();
+                var result = JsonConvert.DeserializeObject<T>(json);
+                return result;
+            }
+            catch (HttpRequestException ex)
+            {
+                Console.WriteLine($"Utils: HTTP request failed - {ex.Message}");
+                return default; // Return the default value for the type
+            }
+        }
+
+        public static async Task<T> ReadJsonFileAsync<T>(string filePath)
+        {
+            if (!File.Exists(filePath))
+            {
+                throw new FileNotFoundException("Utils: File not found", filePath);
+            }
+
+            Console.WriteLine("Utils: " + filePath);
+
+            try
+            {
+                string json = await File.ReadAllTextAsync(filePath);
+                return JsonConvert.DeserializeObject<T>(json, SettingsJson.jsonSerializerSettings);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Utils: Error reading JSON file - {ex.Message}");
+                throw;
+            }
+        }
+
+
         public static AppSettings SetSettingsLanguageByTag(AppSettings settings, string tag)
         {
 
@@ -102,38 +147,7 @@ namespace DAL
             return values;
         }
 
-        public static string GetRelativePath(string basePath, string targetPath)
-        {
-            // Split the paths into individual components
-            string[] baseDirectories = basePath.Split('\\');
-            string[] targetDirectories = targetPath.Split('\\');
-
-            // Find the index where the paths diverge
-            int index = 0;
-            while (index < baseDirectories.Length && index < targetDirectories.Length &&
-                   baseDirectories[index] == targetDirectories[index])
-            {
-                index++;
-            }
-
-            // Build the relative path
-            string relativePath = "";
-            for (int i = index; i < baseDirectories.Length; i++)
-            {
-                relativePath += "..\\";
-            }
-
-            for (int i = index; i < targetDirectories.Length; i++)
-            {
-                relativePath += targetDirectories[i];
-                if (i < targetDirectories.Length - 1)
-                {
-                    relativePath += "\\";
-                }
-            }
-
-            return relativePath;
-        }
+        
 
     }
 }

@@ -2,6 +2,7 @@
 using DAL.Repositories;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -13,6 +14,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WPF.ViewModel;
@@ -66,7 +68,26 @@ namespace WPF.View
         {
             var dialog = new DetailsView(DataFactory.CountryTeams.First(
                 ct => ct.ToString()==cbCountries.SelectedItem.ToString()));
-            //Animacija
+            DoubleAnimation fadeInAnimation = new DoubleAnimation
+            {
+                From = 0,
+                To = 1,
+                Duration = TimeSpan.FromSeconds(0.5),
+                EasingFunction = new CubicEase { EasingMode = EasingMode.EaseInOut }
+            };
+
+            // Create a Storyboard and add the animation
+            Storyboard storyboard = new Storyboard();
+            storyboard.Children.Add(fadeInAnimation);
+
+            // Set the target property for the animation
+            Storyboard.SetTarget(fadeInAnimation, dialog);
+            Storyboard.SetTargetProperty(fadeInAnimation, new PropertyPath(UIElement.OpacityProperty));
+
+            // Start the animation
+            storyboard.Begin();
+            dialog.Opacity = 0;
+
             dialog.ShowDialog();
         }
 
@@ -74,13 +95,31 @@ namespace WPF.View
         {
             var dialog = new DetailsView(DataFactory.CountryTeams.First(
                 ct => ct.ToString() == cbOpponents.SelectedItem.ToString()));
-            //Animacija
+            DoubleAnimation fadeInAnimation = new DoubleAnimation
+            {
+                From = 0,
+                To = 1,
+                Duration = TimeSpan.FromSeconds(0.5),
+                EasingFunction = new CubicEase { EasingMode = EasingMode.EaseInOut }
+            };
+
+            // Create a Storyboard and add the animation
+            Storyboard storyboard = new Storyboard();
+            storyboard.Children.Add(fadeInAnimation);
+
+            // Set the target property for the animation
+            Storyboard.SetTarget(fadeInAnimation, dialog);
+            Storyboard.SetTargetProperty(fadeInAnimation, new PropertyPath(UIElement.OpacityProperty));
+
+            // Start the animation
+            storyboard.Begin();
+            dialog.Opacity = 0;
+
             dialog.ShowDialog();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            AddUserControls();
             cbCountries.SelectionChanged += PaintControls;
             cbOpponents.SelectionChanged += PaintControls;
         }
@@ -106,7 +145,132 @@ namespace WPF.View
                 }
             }
 
-            if(switchControlSides)
+            IList<Player> homeGoalies = new List<Player>();
+            IList<Player> homeDefenders = new List<Player>();
+            IList<Player> homeMidfielders = new List<Player>();
+            IList<Player> homeForwards = new List<Player>();
+
+            IList<Player> awayGoalies = new List<Player>();
+            IList<Player> awayDefenders = new List<Player>();
+            IList<Player> awayMidfielders = new List<Player>();
+            IList<Player> awayForwards = new List<Player>();
+
+            BackgroundWorker worker = new BackgroundWorker();
+            worker.WorkerReportsProgress = true;
+            worker.DoWork += (sender, e) =>
+            {
+
+                if (switchControlSides)
+                {
+                    foreach (var player in match.HomeTeamStatistics.StartingEleven)
+                    {
+                        PlayerControl control;
+                        switch (player.Position)
+                        {
+                            case "Goalie":
+                                awayGoalies.Add(player);
+                                break;
+                            case "Defender":
+                                awayDefenders.Add(player);
+                                break;
+                            case "Midfield":
+                                awayMidfielders.Add(player);
+                                break;
+                            case "Forward":
+                                awayForwards.Add(player);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+
+                    foreach (var player in match.AwayTeamStatistics.StartingEleven)
+                    {
+                        PlayerControl control;
+                        switch (player.Position)
+                        {
+                            case "Goalie":
+                                homeGoalies.Add(player);
+                                break;
+                            case "Defender":
+                                homeDefenders.Add(player);
+                                break;
+                            case "Midfield":
+                                homeMidfielders.Add(player);
+                                break;
+                            case "Forward":
+                                homeForwards.Add(player);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (var player in match.HomeTeamStatistics.StartingEleven)
+                    {
+                        PlayerControl control;
+                        switch (player.Position)
+                        {
+                            case "Goalie":
+                                homeGoalies.Add(player);
+                                break;
+                            case "Defender":
+                                homeDefenders.Add(player);
+                                break;
+                            case "Midfield":
+                                homeMidfielders.Add(player);
+                                break;
+                            case "Forward":
+                                homeForwards.Add(player);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+
+                    foreach (var player in match.AwayTeamStatistics.StartingEleven)
+                    {
+                        PlayerControl control;
+                        switch (player.Position)
+                        {
+                            case "Goalie":
+                                awayGoalies.Add(player);
+                                break;
+                            case "Defender":
+                                awayDefenders.Add(player);
+                                break;
+                            case "Midfield":
+                                awayMidfielders.Add(player);
+                                break;
+                            case "Forward":
+                                awayForwards.Add(player);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
+            };
+
+            worker.RunWorkerCompleted += (sender, e) =>
+            {
+
+                CreatePlayerControls(homeGoalies, true, "Goalies");
+                CreatePlayerControls(homeDefenders, true, "Defenders");
+                CreatePlayerControls(homeMidfielders, true, "Midfields");
+                CreatePlayerControls(homeForwards, true, "");
+
+                CreatePlayerControls(awayGoalies, false, "Goalies");
+                CreatePlayerControls(awayDefenders, false, "Defenders");
+                CreatePlayerControls(awayMidfielders, false, "Midfields");
+                CreatePlayerControls(awayForwards, false, "");
+            };
+
+            worker.RunWorkerAsync();
+
+            /*if (switchControlSides)
             {
                 foreach (var player in match.HomeTeamStatistics.StartingEleven)
                 {
@@ -212,9 +376,54 @@ namespace WPF.View
                             break;
                     }
                 }
-            }
-            
+            }*/
 
+
+        }
+
+        private void CreatePlayerControls(IList<Player> players, bool isHomeTeam , string position)
+        {
+
+            WrapPanel sp;
+            if (isHomeTeam)
+            {
+                if (position == "Goalies")
+                {
+                    sp = spHomeGoalie;
+                } else if (position == "Defenders")
+                {
+                    sp = spHomeDefender;
+                } else if (position == "Midfields")
+                {
+                    sp = spHomeMidfield;
+                } else
+                {
+                    sp = spHomeForward;
+                }
+            } else
+            {
+                if (position == "Goalies")
+                {
+                    sp = spGuestGoalie;
+                }
+                else if (position == "Defenders")
+                {
+                    sp = spGuestDefender;
+                }
+                else if (position == "Midfields")
+                {
+                    sp = spGuestMidfield;
+                }
+                else
+                {
+                    sp = spGuestForward;
+                }
+            }
+
+            foreach (Player player in players)
+            {
+                sp.Children.Add( new PlayerControl(player, match));
+            }
         }
 
         private void ClearUserControls()
@@ -239,6 +448,11 @@ namespace WPF.View
         {
             var dialog = new QuestionView("Are you sure you want to exit?", e);
             dialog.ShowDialog();
+        }
+
+        private void Window_ContentRendered(object sender, EventArgs e)
+        {
+            AddUserControls();
         }
     }
 }

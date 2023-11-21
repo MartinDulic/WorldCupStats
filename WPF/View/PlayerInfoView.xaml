@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF.View"
         mc:Ignorable="d"
-        Title="PlayerInfoView" Height="450" Width="800" ResizeMode="CanMinimize">
-    <Grid>
+        Title="PlayerInfoView" Height="450" Width="800" ResizeMode="CanMinimize" Loaded="Window_Loaded">
+    <Grid x:Name="gridContent">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="10*"/>
