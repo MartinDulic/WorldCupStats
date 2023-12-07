@@ -44,8 +44,8 @@
             // 
             // panelPlayers
             // 
-            resources.ApplyResources(panelPlayers, "panelPlayers");
             panelPlayers.AllowDrop = true;
+            resources.ApplyResources(panelPlayers, "panelPlayers");
             panelPlayers.Name = "panelPlayers";
             panelPlayers.DragDrop += panelPlayers_DragDrop;
             // 
@@ -61,8 +61,8 @@
             // 
             // panelFavouritePlayers
             // 
-            resources.ApplyResources(panelFavouritePlayers, "panelFavouritePlayers");
             panelFavouritePlayers.AllowDrop = true;
+            resources.ApplyResources(panelFavouritePlayers, "panelFavouritePlayers");
             panelFavouritePlayers.Name = "panelFavouritePlayers";
             panelFavouritePlayers.DragDrop += panelFavouritePlayers_DragDrop;
             panelFavouritePlayers.DragEnter += panelFavouritePlayers_DragEnter;
@@ -81,20 +81,20 @@
             // 
             // cmsAddAll
             // 
-            resources.ApplyResources(cmsAddAll, "cmsAddAll");
             cmsAddAll.Items.AddRange(new ToolStripItem[] { addSelectionToolStripMenuItem, settingsToolStripMenuItem });
             cmsAddAll.Name = "cmsAddAll";
+            resources.ApplyResources(cmsAddAll, "cmsAddAll");
             // 
             // addSelectionToolStripMenuItem
             // 
-            resources.ApplyResources(addSelectionToolStripMenuItem, "addSelectionToolStripMenuItem");
             addSelectionToolStripMenuItem.Name = "addSelectionToolStripMenuItem";
+            resources.ApplyResources(addSelectionToolStripMenuItem, "addSelectionToolStripMenuItem");
             addSelectionToolStripMenuItem.Click += addSelectionToolStripMenuItem_Click;
             // 
             // settingsToolStripMenuItem
             // 
-            resources.ApplyResources(settingsToolStripMenuItem, "settingsToolStripMenuItem");
             settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            resources.ApplyResources(settingsToolStripMenuItem, "settingsToolStripMenuItem");
             settingsToolStripMenuItem.Click += settingsToolStripMenuItem_Click;
             // 
             // FavouritePlayersForm
@@ -109,6 +109,7 @@
             Controls.Add(panelPlayers);
             Name = "FavouritePlayersForm";
             FormClosing += FavouritePlayersForm_FormClosing;
+            FormClosed += FavouritePlayersForm_FormClosed;
             Load += FavouritePlayersForm_Load;
             MouseClick += FavouritePlayersForm_MouseClick;
             cmsAddAll.ResumeLayout(false);

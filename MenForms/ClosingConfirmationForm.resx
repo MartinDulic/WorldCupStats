@@ -117,84 +117,75 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>357, 90</value>
-  </data>
-  <data name="&gt;&gt;lblQuesion.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblQuesion.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="btnNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="btnNo.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="btnNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 55</value>
-  </data>
-  <data name="lblQuesion.Text" xml:space="preserve">
-    <value>Are you sure you want to close the form?</value>
-  </data>
-  <data name="&gt;&gt;btnNo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lblQuesion.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Sitka Small, 11.25pt, style=Bold</value>
-  </data>
   <data name="&gt;&gt;btnYes.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnNo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnYes.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>ClosingConfirmationForm</value>
-  </data>
-  <data name="btnNo.Text" xml:space="preserve">
-    <value>No</value>
-  </data>
-  <data name="&gt;&gt;lblQuesion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ClosingConfirmationForm</value>
-  </data>
-  <data name="&gt;&gt;lblQuesion.Name" xml:space="preserve">
-    <value>lblQuesion</value>
-  </data>
-  <data name="btnYes.Text" xml:space="preserve">
-    <value>Yes</value>
-  </data>
-  <data name="&gt;&gt;lblQuesion.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btnYes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 55</value>
-  </data>
-  <data name="&gt;&gt;btnYes.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnYes.Name" xml:space="preserve">
-    <value>btnYes</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;lblQuesion.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ClosingConfirmationForm</value>
+  </data>
+  <data name="&gt;&gt;btnYes.Name" xml:space="preserve">
+    <value>btnYes</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblQuesion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="lblQuesion.Text" xml:space="preserve">
+    <value>Are you sure you want to close the form?</value>
+  </data>
+  <data name="&gt;&gt;lblQuesion.Name" xml:space="preserve">
+    <value>lblQuesion</value>
+  </data>
+  <data name="&gt;&gt;btnNo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnYes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblQuesion.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lblQuesion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 23</value>
+  </data>
+  <data name="btnYes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 55</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ClosingConfirmationForm</value>
+  </data>
+  <data name="&gt;&gt;lblQuesion.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnNo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnNo.Text" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="btnYes.Text" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>357, 90</value>
+  </data>
   <data name="btnYes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btnNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 55</value>
+  </data>
+  <data name="btnNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
   <data name="&gt;&gt;btnNo.Name" xml:space="preserve">
@@ -203,19 +194,28 @@
   <data name="btnYes.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="lblQuesion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
+  <data name="&gt;&gt;btnYes.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="lblQuesion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 23</value>
+  <data name="&gt;&gt;lblQuesion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnNo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblQuesion.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Sitka Small, 11.25pt, style=Bold</value>
   </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>hr</value>
-  </metadata>
+  <data name="lblQuesion.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnNo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>hr</value>
   </metadata>
 </root>

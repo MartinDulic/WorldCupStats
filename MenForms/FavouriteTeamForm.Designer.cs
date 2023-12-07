@@ -78,6 +78,7 @@
             Controls.Add(cbTeams);
             Name = "FavouriteTeamForm";
             FormClosing += FavouriteTeamForm_FormClosing;
+            FormClosed += FavouriteTeamForm_FormClosed;
             Load += FavouriteTeamForm_Load;
             MouseClick += FavouriteTeamForm_MouseClick;
             cms.ResumeLayout(false);

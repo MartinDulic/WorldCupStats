@@ -133,6 +133,8 @@ namespace DAL
             {
                 process.Kill();
             }
+
+
         }
 
         public static string GetValueFromLine(string line)

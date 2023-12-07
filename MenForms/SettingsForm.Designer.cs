@@ -104,6 +104,7 @@
             Controls.Add(btnNext);
             Name = "SettingsForm";
             FormClosing += StartingForm_FormClosing;
+            FormClosed += SettingsForm_FormClosed;
             gbLanguage.ResumeLayout(false);
             gbLanguage.PerformLayout();
             gbChampionship.ResumeLayout(false);

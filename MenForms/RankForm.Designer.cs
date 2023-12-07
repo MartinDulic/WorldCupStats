@@ -125,6 +125,7 @@
             Controls.Add(lblPlayersGoalsScored);
             Name = "RankForm";
             FormClosing += RankForm_FormClosing;
+            FormClosed += RankForm_FormClosed;
             Load += RankForm_Load;
             MouseClick += RankForm_MouseClick;
             cmsPrint.ResumeLayout(false);

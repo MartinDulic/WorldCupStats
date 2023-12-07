@@ -75,11 +75,17 @@ namespace MenForms
         {
             if (confirmOnClose)
             {
-                var dialog = new ClosingConfirmationForm(e);
-                dialog.ShowDialog();
-
+                DialogResult result = MessageBox.Show("Do you want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Console.WriteLine("You chose 'Yes'");
+                }
+                else
+                {
+                    Console.WriteLine("You chose 'No'");
+                    e.Cancel = true;
+                }
             }
-            Utils.KillProccess(Utils.PROCCES_NAME);
         }
 
         private void brnNext_Click(object sender, EventArgs e)
@@ -95,7 +101,7 @@ namespace MenForms
             form.Show();
 
             confirmOnClose = false;
-            Close();
+            Dispose();
 
         }
 
@@ -117,6 +123,11 @@ namespace MenForms
         {
             ChangeCulture(Utils.GetLanguageTagFromSettings(DataFactory.AppSettings));
             FavouriteTeamForm_Load(this, new EventArgs());
+        }
+
+        private void FavouriteTeamForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -1,4 +1,4 @@
 repository:file
 lang:english
-championship:men
-resolution:fullscreen
+championship:woman
+resolution:r720x480

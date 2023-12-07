@@ -50,11 +50,19 @@ namespace MenForms
         }
         private void FavouritePlayersForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (confirmOnClose){
-                var dialog = new ClosingConfirmationForm(e);
-                dialog.ShowDialog();
+            if (confirmOnClose)
+            {
+                DialogResult result = MessageBox.Show("Do you want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Console.WriteLine("You chose 'Yes'");
+                }
+                else
+                {
+                    Console.WriteLine("You chose 'No'");
+                    e.Cancel = true;
+                }
             }
-            Utils.KillProccess(Utils.PROCCES_NAME);
         }
         private void BlinkTimer_Tick(object sender, EventArgs e)
         {
@@ -286,7 +294,7 @@ namespace MenForms
             form.Show();
 
             confirmOnClose = false;
-            Close();
+            Dispose();
 
         }
 
@@ -300,6 +308,11 @@ namespace MenForms
         {
             var form = new SettingsForm(this);
             form.ShowDialog();
+        }
+
+        private void FavouritePlayersForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

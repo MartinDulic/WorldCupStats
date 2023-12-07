@@ -56,5 +56,10 @@ namespace MenForms
             args.Cancel = true;
             Close();
         }
+
+        private void ClosingConfirmationForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

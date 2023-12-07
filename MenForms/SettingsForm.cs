@@ -88,12 +88,15 @@ namespace MenForms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            var dialog = new SettingsConfirmationForm(this);
-            dialog.ShowDialog();
-            if (!ApplyChanges)
+            DialogResult result = MessageBox.Show("Apply changes?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
+                Console.WriteLine("You chose 'Yes'");
                 Close();
                 return;
+            } else
+            {
+                Console.WriteLine("You chose 'No'");
             }
 
             if (rbMen.Checked)
@@ -122,7 +125,11 @@ namespace MenForms
 
         private void StartingForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Utils.KillProccess(Utils.PROCCES_NAME);
+
+        }
+
+        private void SettingsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
         }
     }
 }

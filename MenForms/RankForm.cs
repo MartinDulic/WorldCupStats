@@ -344,12 +344,21 @@ namespace MenForms
 
         private void RankForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (confirmOnClose)
+            DialogResult result = MessageBox.Show("Do you want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
-                var dialog = new ClosingConfirmationForm(e);
-                dialog.ShowDialog();
+                Console.WriteLine("You chose 'Yes'");
             }
-            Utils.KillProccess(Utils.PROCCES_NAME);
+            else
+            {
+                Console.WriteLine("You chose 'No'");
+                e.Cancel = true;
+            }
+        }
+
+        private void RankForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

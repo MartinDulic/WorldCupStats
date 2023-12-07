@@ -20,14 +20,16 @@ namespace MenForms
             if (settings.Language == Language.CROATIAN)
             {
                 rbCro.Checked = true;
-            } else
+            }
+            else
             {
                 rbEng.Checked = true;
             }
             if (settings.SelectedChampionship == SelectedChampionship.MEN)
             {
                 rbMen.Checked = true;
-            } else
+            }
+            else
             {
                 rbWomen.Checked = true;
             }
@@ -104,17 +106,29 @@ namespace MenForms
             var form = new FavouriteTeamForm();
             form.Show();
             confirmOnClose = false;
-            Close();
+            Dispose(); 
         }
 
         private void StartingForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (confirmOnClose)
             {
-                var dialog = new ClosingConfirmationForm(e);
-                dialog.ShowDialog();
-            }
-            Utils.KillProccess(Utils.PROCCES_NAME);
+                DialogResult result = MessageBox.Show("Do you want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Console.WriteLine("You chose 'Yes'");
+                }
+                else
+                {
+                    Console.WriteLine("You chose 'No'");
+                    e.Cancel = true;
+                }
+            } 
+        }
+
+        private void StartingForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

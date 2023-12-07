@@ -63,6 +63,7 @@
             Controls.Add(btnYes);
             Controls.Add(lblQuesion);
             Name = "ClosingConfirmationForm";
+            FormClosed += ClosingConfirmationForm_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }
